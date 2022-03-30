@@ -1,6 +1,6 @@
 {
 
-	"name" : "Хедер",
+	"name" : "Header",
 	"default" : true,
 	"remove" : false,
 	"id" : "header",
