@@ -1,0 +1,30 @@
+:root {
+
+    --backgroundOne: #131414;
+    --backgroundTwo: #1B1D1F;
+    --backgroundThree: #222529;
+    --backgroundFour: #2F353D;
+
+    --contentPrimary: #FFFFFF;
+    --contentSubPrimary: rgba(255,255,255, 0.72);
+    --contentSecondary: rgba(255,255,255, 0.48);
+    --contentDisabled: rgba(255,255,255, 0.32);
+    --contentBackTwo: rgba(255,255,255, 0.12);
+    --contentBackOne: rgba(255,255,255, 0.04);
+    --contentInverse: #050505;
+
+    --accentPrimary: #2A83F2;
+    --accentSubPrimary: rgba(42,131,242, 0.64);
+    --accentSecondary: rgba(42,131,242, 0.40);
+    --accentDisabled: rgba(42,131,242, 0.24);
+    --accentBackTwo: rgba(42,131,242, 0.08);
+    --accentBackOne: rgba(42,131,242, 0.04);
+
+    --errorPrimary: #F34257;
+    --errorSecondary: rgba(243, 66, 87, 0.08);
+    --successPrimary: #31DBAB;
+    --successSecondary: rgba(49, 219, 171, 0.08);
+    --warningPrimary: #F3BD3D;
+    --warningSecondary: rgba(243, 189, 61, 0.08);
+
+}
