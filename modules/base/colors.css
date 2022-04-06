@@ -5,20 +5,26 @@
     --backgroundThree: #222529;
     --backgroundFour: #2F353D;
 
+    --subPrimary: 0.72;
+    --secondary: 0.48;
+    --disabled: 0.32;
+    --backTwo: 0.12;
+    --backOne: 0.04;
+
     --contentPrimary: #FFFFFF;
-    --contentSubPrimary: rgba(255,255,255, 0.72);
-    --contentSecondary: rgba(255,255,255, 0.48);
-    --contentDisabled: rgba(255,255,255, 0.32);
-    --contentBackTwo: rgba(255,255,255, 0.12);
-    --contentBackOne: rgba(255,255,255, 0.04);
+    --contentSubPrimary: rgba(255,255,255, var(--subPrimary));
+    --contentSecondary: rgba(255,255,255, var(--secondary));
+    --contentDisabled: rgba(255,255,255, var(--disabled));
+    --contentBackTwo: rgba(255,255,255, var(--backTwo));
+    --contentBackOne: rgba(255,255,255, var(--backOne));
     --contentInverse: #050505;
 
     --accentPrimary: #2A83F2;
-    --accentSubPrimary: rgba(42,131,242, 0.64);
-    --accentSecondary: rgba(42,131,242, 0.40);
-    --accentDisabled: rgba(42,131,242, 0.24);
-    --accentBackTwo: rgba(42,131,242, 0.08);
-    --accentBackOne: rgba(42,131,242, 0.04);
+    --accentSubPrimary: rgba(42,131,242, var(--subPrimary));
+    --accentSecondary: rgba(42,131,242, var(--secondary));
+    --accentDisabled: rgba(42,131,242, var(--disabled));
+    --accentBackTwo: rgba(42,131,242, var(--backTwo));
+    --accentBackOne: rgba(42,131,242, var(--backOne));
 
     --errorPrimary: #F34257;
     --errorSecondary: rgba(243, 66, 87, 0.08);

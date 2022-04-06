@@ -20,21 +20,19 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--contentBackOne);
-    opacity: 0;
     transition: .3s;
 
 }
 
 .btn:hover:after {
 
-    opacity: .5;
+    background-color: var(--contentBackOne);
 
 }
 
 .btn:active:after {
 
-    opacity: 1;
+    background-color: var(--contentBackTwo);
 
 }
 
@@ -128,8 +126,20 @@
 
 }
 
+.btn--secondary img {
+
+    opacity: .72;
+
+}
+
 .btn--default {
 
     color: var(--contentSubPrimary);
+
+}
+
+.btn--default img {
+
+    opacity: .72;
 
 }

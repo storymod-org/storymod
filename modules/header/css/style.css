@@ -1,0 +1,13 @@
+.header {
+
+    width: 100%;
+    background-color: var(--backgroundOne);
+
+}
+
+.header__wrap {
+
+    width: var(--x);
+    display: flex;
+
+}
