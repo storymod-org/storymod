@@ -1,0 +1,36 @@
+{
+    "modules" : [
+        {
+            "id": 1,
+            "component": "MainScreen",
+            "image": "house.jpg",
+            "title": "Теплый семейный дом c террасой за 30 дней",
+            "subtitle": "Альтернатива городской квартире",
+            "button": true
+        },
+        {
+            "id": 2,
+            "component": "MainScreen",
+            "image": "house.jpg",
+            "title": "Номер 1",
+            "subtitle": "Альтернатива городской квартире",
+            "button": true
+        },
+        {
+            "id": 3,
+            "component": "MainScreen",
+            "image": "house.jpg",
+            "title": "Номер 1",
+            "subtitle": "rf городской квартире",
+            "button": true
+        }
+    ],
+
+    "pages" : [
+        {
+            "name": "Главная страница",
+            "href": "index",
+            "isMain": true
+        }
+    ]
+}

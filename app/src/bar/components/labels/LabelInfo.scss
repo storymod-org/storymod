@@ -1,0 +1,57 @@
+@import '../atoms/atoms';
+
+.stm-label-info {
+    
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin: 40px; // Убрать
+
+    &__button {
+        width: 24px;
+        height: 24px;
+        padding: 4px;
+        opacity: $disabled;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+    &__tooltip {
+        position: absolute;
+        background-color: $bg-4;
+        @include p2;
+        padding: 8px;
+        border-radius: 4px;
+        width: 250px;
+        display: none;
+        color: $content-primary;
+        bottom: 32px;
+        left: calc(50% - 125px);
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 16px;
+            height: 8px;
+            background-image: url('./tooltip-before.svg');
+            bottom: -8px;
+            left: calc(50% - 8px);
+        }
+
+    }
+
+    &:hover {
+        
+        .stm-label-info__button {
+            opacity: $secondary;
+        }
+
+        .stm-label-info__tooltip {
+            display: block;
+        }
+
+    }
+
+}

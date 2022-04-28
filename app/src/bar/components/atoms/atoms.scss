@@ -1,0 +1,69 @@
+@import './theme/dark';
+
+// Fonts
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+    }
+}
+
+@include font('SF Pro Display', normal, 400, './fonts/SFProDisplayRegular.woff2');
+@include font('SF Pro Display', normal, 500, './fonts/SFProDisplayMedium.woff2');
+@include font('SF Pro Display', normal, 600, './fonts/SFProDisplaySemiBold.woff2');
+
+// Typography
+
+$font: 'SF Pro Display', sans-serif;
+
+@mixin h1 {
+	font-size: 24px;
+	line-height: 24px;
+	font-weight: 500;
+}
+@mixin h2 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 500;
+}
+@mixin h3 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 500;
+}
+
+@mixin p1 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+@mixin p2 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin b1 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 600;
+}
+@mixin b2 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 600;
+}
+@mixin label {
+	font-size: 12px;
+	line-height: 12px;
+	font-weight: 500;
+}
+@mixin placeholder {
+	font-size: 12px;
+	line-height: 20px;
+	font-weight: 400;
+}
+

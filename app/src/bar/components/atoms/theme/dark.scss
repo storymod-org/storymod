@@ -1,0 +1,37 @@
+// Background
+$bg-1: #131414;
+$bg-2: #1B1D1F;
+$bg-3: #222529;
+$bg-4: #2F353D;
+
+// Styles
+$sub-primary: 72%;
+$secondary: 48%;
+$disabled: 32%;
+$back-2: 12%;
+$back-1: 4%;
+
+// Content
+$content-primary: #FFFFFF;
+$content-sub-primary: rgba($content-primary, $sub-primary);
+$content-secondary: rgba($content-primary, $secondary);
+$content-disabled: rgba($content-primary, $disabled);
+$content-back-2: rgba($content-primary, $back-2);
+$content-back-1: rgba($content-primary, $back-1);
+
+
+// Accent
+$accent-primary: #2A83F2;
+$accent-sub-primary: rgba($accent-primary, $sub-primary);
+$accent-secondary: rgba($accent-primary, $secondary);
+$accent-disabled: rgba($accent-primary, $disabled);
+$accent-back-2: rgba($accent-primary, $back-2);
+$accent-back-1: rgba($accent-primary, $back-1);
+
+// System
+$error-primary: #F34257;
+$error-secondary: rgba($error-primary, $back-1);
+$success-primary: #31DBAB;
+$success-secondary: rgba($success-primary, $back-1);
+$warning-primary: #F3BD3D;
+$warning-secondary: rgba($warning-primary, $back-1);

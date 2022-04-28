@@ -1,0 +1,38 @@
+@import '../atoms/atoms';
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    
+    // State
+
+    &-primary {
+        background-color: $accent-primary;
+        color: $content-primary;
+    }
+    &-secondary {
+        background-color: $content-back-1;
+        color: $content-sub-primary;
+    }
+    &-default {
+        color: $content-sub-primary;
+    }
+
+    // Size
+
+    &-big {
+        height: 64px;
+        padding: 0 24px;
+        border-radius: $radius-2;
+        @include btn-1;
+    }
+    &-small {
+        height: 44px;
+        padding: 0 16px;
+        border-radius: $radius-1;
+        @include btn-2;
+    }
+
+}

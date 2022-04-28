@@ -1,0 +1,18 @@
+{
+    "modules" : [
+        {
+            "name": "main-screen",
+            "image": true,
+            "subtitle": true,
+            "button": true
+        }
+    ],
+
+    "pages" : [
+        {
+            "name": "Главная страница",
+            "href": "index",
+            "isMain": true
+        }
+    ]
+}

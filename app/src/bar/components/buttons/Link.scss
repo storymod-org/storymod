@@ -1,0 +1,18 @@
+@import '../atoms/atoms';
+
+.stm-link {
+    color: $content-sub-primary;
+    text-decoration: underline;
+    &:hover {
+        color: $content-primary;
+    }
+    &:active {
+        text-decoration: none;
+    }
+    &--small {
+        @include h3;
+    }
+    &--big {
+        @include h2;
+    }
+}

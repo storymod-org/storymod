@@ -1,0 +1,99 @@
+@import './theme/dark';
+
+// Fonts
+
+@mixin font($fname, $fstyle, $fweight, $furl) {
+	@font-face {
+		font-family: $fname;
+		font-style: $fstyle;
+		font-weight: $fweight;
+		src: url($furl) format('woff2');
+    }
+}
+
+@include font('Fira Sans', normal, 400, './fonts/FiraSansRegular.woff2');
+@include font('Fira Sans', normal, 500, './fonts/FiraSansMedium.woff2');
+
+// Typography
+
+$font: 'Fira Sans', sans-serif;
+
+@mixin title-1 {
+	font-size: 64px;
+	line-height: 96px;
+	font-weight: 500;
+}
+@mixin title-2 {
+	font-size: 40px;
+	line-height: 60px;
+	font-weight: 500;
+}
+@mixin title-3 {
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 500;
+}
+
+@mixin paragraph-1 {
+	font-size: 24px;
+	line-height: 36px;
+	font-weight: 400;
+}
+@mixin paragraph-2 {
+	font-size: 20px;
+	line-height: 28px;
+	font-weight: 400;
+}
+@mixin paragraph-3 {
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: 400;
+}
+@mixin paragraph-4 {
+	font-size: 14px;
+	line-height: 20px;
+	font-weight: 400;
+}
+
+@mixin btn-1 {
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 400;
+}
+@mixin btn-2 {
+	font-size: 14px;
+	line-height: 14px;
+	font-weight: 400;
+}
+
+// Grid
+
+$radius-1: 4px;
+$radius-2: 8px;
+$radius-3: 12px;
+$radius-4: 16px;
+
+$x: 1208px;
+$l: 896px;
+$m: 568px;
+$s: 288px;
+
+// Main
+
+.project {
+	font-family: $font;
+	background-color: $bg-1;
+	color: $content-primary;
+}
+
+.project img {
+	max-width: 100%;
+}
+
+.h1 {
+	@include title-1;
+}
+
+.p1 {
+	@include paragraph-1;
+}

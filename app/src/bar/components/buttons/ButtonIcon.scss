@@ -1,0 +1,48 @@
+@import '../atoms/atoms';
+
+.stm-btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+
+    &--default-primary {
+        background-color: $content-back-1;
+        opacity: $sub-primary;
+        &:hover {
+            opacity: 1;
+        }
+        &:active {
+            background-color: $content-back-2;
+        }
+    }
+
+    &--default-secondary {
+        opacity: $sub-primary;
+        &:hover {
+            background-color: $content-back-1;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+
+    &--big {
+        height: 44px;
+        width: 44px;
+        img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &--small {
+        width: 24px;
+        height: 24px;
+        img {
+            width: 16px;
+            height: 16px;
+        }
+    }
+
+}

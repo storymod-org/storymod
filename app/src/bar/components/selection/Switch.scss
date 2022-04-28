@@ -1,0 +1,25 @@
+@import '../atoms/atoms';
+
+.stm-switch {
+    width: 40px;
+    height: 24px;
+    border-radius: 2px;
+    background-color: $content-back-1;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        border-radius: 1px;
+        background-color: $content-secondary;
+        top: 4px;
+    }
+    &--false::before {
+        left: 4px;
+    }
+    &--true::before {
+        left: 20px;
+    }
+}

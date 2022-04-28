@@ -1,0 +1,66 @@
+@import '../atoms/atoms';
+
+.stm-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include b2;
+    height: 44px;
+    padding: 0 16px;
+    border-radius: 4px;
+
+    &--default-primary {
+        background-color: $content-back-1;
+        color: $content-sub-primary;
+        &:hover {
+            color: $content-primary;
+        }
+        &:active {
+            background-color: $content-back-2;
+        }
+    }
+
+    &--default-secondary {
+        color: $content-sub-primary;
+        &:hover {
+            background-color: $content-back-1;
+        }
+        &:active {
+            color: $content-primary;
+        }
+    }
+
+    &--accent {
+        background-color: $accent-primary;
+        color: $content-primary;
+        &:hover {
+            background-color: lighten($accent-primary, $back-1);
+        }
+        &:active {
+            background-color: lighten($accent-primary, $back-1 * 2);
+        }    
+    }
+
+    &--destruct-primary {
+        background-color: $error-primary;
+        color: $content-primary;
+        &:hover {
+            background-color: lighten($error-primary, $back-1);
+        }
+        &:active {
+            background-color: lighten($error-primary, $back-1 * 2);
+        }  
+    }
+
+    &--destruct-secondary {
+        background-color: $error-secondary;
+        color: $error-primary;
+        &:hover {
+            background-color: lighten($error-secondary, $back-2);
+        }
+        &:active {
+            background-color: lighten($error-secondary, $back-2 * 2);
+        }  
+    }
+
+}
