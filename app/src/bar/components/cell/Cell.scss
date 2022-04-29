@@ -2,4 +2,67 @@
 
 .stm-cell {
 
+    height: 52px;
+    width: 100%;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px 0 14px;
+    cursor: pointer;
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 4px;
+        background-color: $content-back-1;
+        padding: 4px;
+        flex-shrink: 0;
+        img {
+            width: 16px;
+            height: 16px;
+            opacity: $sub-primary;
+        }
+    }
+
+    &__text {
+        margin: 0 8px;
+        width: 100%;
+        @include h3;
+        color: $content-sub-primary;
+        overflow: hidden;
+        p {
+            width: max-content;
+        }
+    }
+
+    &__option {
+        flex-shrink: 0;
+    }
+
+    &__label {
+        @include p2;
+        color: $content-sub-primary;
+    }
+
+    &--button {
+        padding-right: 4px;
+    }
+
+    &:hover .stm-cell__text {
+        color: $content-primary;
+    }
+
+    &:active {
+        background-color: $content-back-1;
+    }
+
+    &--active {
+        background: $content-back-1;
+
+        &:active {
+            background-color: $content-back-2;
+        }
+
+    }
+
 }

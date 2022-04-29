@@ -2,12 +2,13 @@ import React, {Component} from "react";
 import './bar.scss'
 
 import Button from "./components/buttons/Button";
-// import ButtonIcon from "./components/buttons/ButtonIcon";
+import ButtonIcon from "./components/buttons/ButtonIcon";
 import Link from "./components/buttons/Link";
 import Switch from "./components/selection/Switch";
 import LabelInfo from "./components/labels/LabelInfo";
 import ActionSheet from "./components/action-sheet/ActionSheet";
 import HeaderBar from "./components/header-bar/HeaderBar";
+import Cell from "./components/cell/Cell";
 
 const listItems = [
     {
@@ -50,7 +51,28 @@ export default class Bar extends Component {
                             firstButton='action-next'
                             text='Сайт по пиломатериалам Сайт по пиломатериалам'
                             lastButton='action-close'/>
-                        
+                        <Cell
+                            icon='objects-modul'
+                            text='Telegram for Web Telegram for Web Telegram for Web'
+                            active
+                            disable
+                            option={<ButtonIcon state='default-secondary' size='big' icon='action-more'/>}/>
+                        <Cell
+                            icon='objects-modul'
+                            text='Telegram for Web Telegram for Web Telegram for Web'
+                            active
+                            disable
+                            option={<LabelInfo text="Только строчные латинские буквы"/>}/>
+                        <Cell
+                            icon='objects-modul'
+                            text='Telegram for Web Telegram for Web Telegram for Web'
+                            disable/>
+                        <Cell
+                            icon='objects-modul'
+                            text='Telegram for Web Telegram for Web Telegram for Web'
+                            active
+                            disable
+                            option={<div className='stm-cell__label'>0 / 2</div>}/>
                     </div>
                     <div className="stm-header__title stm-title">
                         Сайт по пиломатериалам
