@@ -1,0 +1,27 @@
+@import '../atoms/atoms';
+
+.stm-input {
+    @include p2;
+    background-color: $bg-1;
+    border-radius: 4px;
+    outline: 1px solid $content-back-1;
+    color: $content-primary;
+    width: 100%;
+    &:hover {
+        outline: 1px solid $content-back-2;
+    }
+    &:active {
+        outline: 1px solid $content-disabled;
+    }
+    &:focus {
+        outline: 1px solid $accent-primary;
+    }
+    &:disabled {
+        background-color: $content-back-1;
+        color: $content-disabled;
+        outline: 1px solid $content-back-2;
+    }
+    &:invalid {
+        outline: 1px solid $error-primary;
+    }
+}

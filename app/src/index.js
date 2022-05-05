@@ -9,7 +9,9 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
   <div className="stm-app">
-    <Project config={config}/>
-    <Bar config={config}/>
+    <Project config={config.pages[0].modules}/>
+    <div className='stm-app__bar'>
+      <Bar config={config}/>
+    </div>
   </div>
 );

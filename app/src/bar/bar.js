@@ -1,93 +1,65 @@
-import React, {Component} from "react";
+import React, {Component} from "react"
 import './bar.scss'
 
-import Button from "./components/buttons/Button";
-import ButtonIcon from "./components/buttons/ButtonIcon";
-import Link from "./components/buttons/Link";
-import Switch from "./components/selection/Switch";
-import LabelInfo from "./components/labels/LabelInfo";
-import ActionSheet from "./components/action-sheet/ActionSheet";
-import HeaderBar from "./components/header-bar/HeaderBar";
-import Cell from "./components/cell/Cell";
+import HeaderBar from "./bar/HeaderBar/HeaderBar"
+import Button from "./components/buttons/Button"
 
-const listItems = [
-    {
-        id: '1',
-        text: 'Изменить стиль'
-    },
-    {
-        id: '2',
-        text: 'Изменить стиль 2'
-    },
-    {
-        id: '3',
-        text: 'Изменить стиль 3'
-    },
-    {
-        id: '4',
-        text: 'Изменить стиль 4'
-    }
-]
-
+import ButtonIcon from './components/buttons/ButtonIcon'
+// import CellList from './components/cellList/CellLits'
+import SectionList from "./bar/SectionList/SectionList"
 export default class Bar extends Component {
 
+    constructor(state) {
+        super(state);
+        this.state = {
+            pages: true,
+            nav: 'pages'
+
+        }
+    }
+
     render() {
+
+        const {config} = this.props;
+
         return (
-            <div className="stm-app__bar stm-bar">
-                <div className="stm-bar__header stm-header">
-                    <div className="stm-header__publish">
-                        <Link
-                            size="small"
-                            text="telegram.storycrafter.ru"
-                            link="#"/>
-                        <Switch
-                            state="false"/>
-                        <LabelInfo
-                            text="Только строчные латинские буквы"/>
-                        <ActionSheet
-                            elements={listItems}/>
+            <div className="stm-bar">
+                <div className="stm-bar__header">
+                    
+                    <HeaderBar
 
-                        <HeaderBar
-                            firstButton='action-next'
-                            text='Сайт по пиломатериалам Сайт по пиломатериалам'
-                            lastButton='action-close'/>
-                        <Cell
-                            icon='objects-modul'
-                            text='Telegram for Web Telegram for Web Telegram for Web'
-                            active
-                            disable
-                            option={<ButtonIcon state='default-secondary' size='big' icon='action-more'/>}/>
-                        <Cell
-                            icon='objects-modul'
-                            text='Telegram for Web Telegram for Web Telegram for Web'
-                            active
-                            disable
-                            option={<LabelInfo text="Только строчные латинские буквы"/>}/>
-                        <Cell
-                            icon='objects-modul'
-                            text='Telegram for Web Telegram for Web Telegram for Web'
-                            disable/>
-                        <Cell
-                            icon='objects-modul'
-                            text='Telegram for Web Telegram for Web Telegram for Web'
-                            active
-                            disable
-                            option={<div className='stm-cell__label'>0 / 2</div>}/>
-                    </div>
-                    <div className="stm-header__title stm-title">
-                        Сайт по пиломатериалам
-                    </div>
-                    <div className="stm-header__menu">
+                        firstBtn={<ButtonIcon 
+                            icon='action-publish' 
+                            state='default-secondary' 
+                            size='big' 
+                            onClick={console.log('publishProject')}/>}
+                            
+                        title={config.info.name}
 
-                    </div>
+                        lastBtn={<ButtonIcon 
+                            icon='action-menu' 
+                            state='default-secondary' 
+                            size='big' 
+                            onClick={console.log('openMenu')}/>}/>
+
                 </div>
                 <div className="stm-bar__content">
-                    
+
+                    {/* <CellList 
+                        icon='objects-modul'
+                        cells={config.pages[0].modules}/> */}
+
+                    <div className='stm-bar__section'>
+                        <SectionList sections={config.pages[0].modules[0].sections}/> 
+                    </div>
+
                 </div>
                 <div className="stm-bar__button">
-                    <Button
-                        state="destruct-secondary"
-                        text="Добавить страницу"/>
+
+                    <Button 
+                        text='Добавить страницу'
+                        state='default-primary'/>
+                        
                 </div>
             </div>
         )

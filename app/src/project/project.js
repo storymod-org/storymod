@@ -8,7 +8,7 @@ export default class Project extends Component {
 
         const {config} = this.props;
 
-        const modul = config.modules.map((item) => {
+        const modul = config.map((item) => {
 
             if (item.component === 'MainScreen') {
                 return (

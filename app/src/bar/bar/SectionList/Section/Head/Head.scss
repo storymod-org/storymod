@@ -1,0 +1,24 @@
+@import '../../../../components/atoms/atoms';
+
+.stm-section-head {
+    display: flex;
+    padding: 16px 16px 8px 16px;
+
+    &__title {
+        width: 100%;
+        overflow: hidden;
+        > h2 {
+            @include h2;
+            width: max-content;
+        }
+    }
+
+    &__btns {
+        flex-shrink: 0;
+        display: flex;
+        >button {
+            margin-left: 4px;
+        }
+    }
+
+}

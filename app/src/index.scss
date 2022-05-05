@@ -11,6 +11,10 @@ button {
     overflow: visible;
 }
 
+input {
+    border: 0;
+}
+
 img {
     max-width: 100%;
 }
@@ -24,8 +28,7 @@ img {
     &__bar {
         width: 328px;
         flex-shrink: 0;
-        overflow-x: hidden;
-        overflow-y: scroll;
+        overflow: hidden;
     }
 
     &__project {

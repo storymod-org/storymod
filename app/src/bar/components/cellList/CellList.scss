@@ -1,0 +1,13 @@
+@import '../atoms/atoms';
+
+.stm-cell-list {
+
+    padding: 8px;
+    > div {
+        margin-bottom: 8px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+}

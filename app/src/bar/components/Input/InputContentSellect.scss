@@ -1,0 +1,36 @@
+.stm-input-content-sellect {
+    
+    position: relative;
+
+    &__input {
+        padding: 12px;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('../../../../public/bar/icons/action-down.svg') cover no-repeat;
+            right: 12px;
+            top: 12px;
+        }
+
+    }
+
+    &__action-sheet {
+        top: 46px;
+        position: absolute;
+        display: block;
+        width: 100%;
+    }
+
+    > .stm-show {
+        display: block;
+    }
+
+    > .stm-hide {
+        display: none;
+    }
+
+}

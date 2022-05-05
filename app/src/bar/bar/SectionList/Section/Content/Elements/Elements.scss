@@ -1,0 +1,9 @@
+.stm-section-elements {
+    margin-bottom: 8px;
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &__list {
+        margin: 0 8px 8px 8px;
+    }
+}
