@@ -7,12 +7,12 @@ export default class CellList extends Component {
 
     render() {
 
-        const {cells, icon} = this.props;
+        const {cells, icon, action} = this.props;
         let className = 'stm-cell-list';
 
         const elements = cells.map((item) => {
             return (
-                <Cell key={item.id} icon={icon} text={item.name} option={cells.option}/>
+                <Cell key={item.id} icon={icon} text={item.name} option={cells.option} action={action}/>
             )
         });
 

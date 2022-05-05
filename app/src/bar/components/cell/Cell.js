@@ -5,7 +5,7 @@ export default class Cell extends Component {
 
     render() {
 
-        const {icon, text, option, active, disable} = this.props;
+        const {icon, text, option, active, disable, action} = this.props;
         
         let className = ['stm-cell']
 
@@ -23,7 +23,7 @@ export default class Cell extends Component {
 
         return (
 
-        <div className={className.join(' ')}>
+        <div className={className.join(' ')} onClick={action}>
             <div className="stm-cell__icon"><img src={srcIcon} alt='Icon'/></div>
             <div className="stm-cell__text"><p>{text}</p></div>
             <div className="stm-cell__option">{option}</div>

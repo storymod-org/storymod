@@ -9,17 +9,21 @@ export default class SectionList extends Component {
 
         const {sections} = this.props;
 
-        const elements = sections.map((item) => {
+        if (sections) {
+            const elements = sections.map((section) => {
+                return (
+                    <Section key={section.id} section={section}/>
+                )
+            })
+    
             return (
-                <Section key={item.id} item={item}/>
+                <div className="stm-section-list">
+                    {elements}
+                </div>
             )
-        })
-
-        return (
-            <div className="stm-section-list">
-                {elements}
-            </div>
-        )
+        } else {
+            console.log('Error');
+        }
     }
 
 }

@@ -9,14 +9,14 @@ export default class Section extends Component {
 
     render() {
 
-        const {item} = this.props;
+        const {section} = this.props;
 
         return (
             <div className="stm-section">
 
-                <Head name={item.name} add={item.add} remove={item.remove}/>
-                <Style styles={item.styles}/>
-                <Content content={item.content} remove={item.remove}/>
+                <Head name={section.name} add={section.add} remove={section.remove}/>
+                <Style styles={section.styles}/>
+                <Content content={section.content} remove={section.remove}/>
 
             </div>
         )
