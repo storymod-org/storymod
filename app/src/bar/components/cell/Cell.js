@@ -1,15 +1,16 @@
 import React, {Component} from "react";
-import './Cell.scss';
+import './cell.scss';
 
 export default class Cell extends Component {
 
     render() {
 
-        const {icon, text, option, active, disable, action} = this.props;
+        const {icon, text, option, active, disable, action, type} = this.props;
         
         let className = ['stm-cell']
+        const srcIcon = `bar/icons/${icon}.svg`
 
-        if (option && option.type.name === 'ButtonIcon') {
+        if (type=== 'button') {
             className.push('stm-cell--button');
         }
         if (active) {
@@ -19,11 +20,11 @@ export default class Cell extends Component {
             className.push('stm-cell--disable');
         }        
 
-        const srcIcon = `bar/icons/${icon}.svg`
-
         return (
 
-        <div className={className.join(' ')} onClick={action}>
+        <div 
+            className={className.join(' ')} 
+            onClick={action}>
             <div className="stm-cell__icon"><img src={srcIcon} alt='Icon'/></div>
             <div className="stm-cell__text"><p>{text}</p></div>
             <div className="stm-cell__option">{option}</div>

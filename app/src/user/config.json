@@ -258,6 +258,259 @@
 
                 }
             ]
+        },
+        {
+            "name": "Каталог",
+            "id": 2,
+            "href": "index",
+            "isMain": true,
+
+            "modules" : [
+                {
+                    "id": 1,
+                    "name": "Основной экран",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Теплый семейный дом c террасой за 30 дней",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 1,
+                            "name": "Gj",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 2,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "id": 2,
+                    "name": "Основной экран",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Юлька Дура",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 2,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 2,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 2,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                }
+            ]
         }
     ]
 }

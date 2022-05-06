@@ -1,0 +1,11 @@
+@import '../atoms/atoms';
+
+.stm-button-more {
+    position: relative;
+    &__dropdown {
+        position: absolute;
+        width: max-content;
+        right: 0;
+        top: 46px;
+    }
+}

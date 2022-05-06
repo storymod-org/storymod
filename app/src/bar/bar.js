@@ -1,10 +1,12 @@
 import React, {Component} from "react"
 import './bar.scss'
 
-import HeaderBar from "./bar/HeaderBar/HeaderBar"
-import Button from "./components/buttons/Button"
-import CellList from './components/cellList/CellLits'
-import SectionList from "./bar/SectionList/SectionList"
+import Header from "./bar/header/header"
+import Button from "./components/button/button"
+import Cells from './components/cells/cells'
+
+import Sections from "./bar/sections/sections"
+import Pages from './bar/pages/pages'
 
 export default class Bar extends Component {
 
@@ -17,11 +19,14 @@ export default class Bar extends Component {
             modul: 0,
             section: 0
         }
-        this.actionPage = this.actionPage.bind(this)
+        this.openPage = this.openPage.bind(this)
     }
 
-    actionPage(nav) {
-        this.setState({nav})
+    openPage(page) {
+        this.setState({
+            nav: 1,
+            page: page
+        })
     }
 
     render() {
@@ -32,32 +37,32 @@ export default class Bar extends Component {
         if (nav === 0) {
             return (
                 <div className="stm-bar">
-                    <HeaderBar firstBtnIcon='action-publish' title={pages[page].name} lastBtnIcon='action-menu'/>
-                    <div className="stm-bar__content"><CellList cells={pages} icon='objects-page' action={() => this.actionPage(1)}/></div>
+                    <Header firstBtnIcon='action-publish' title={pages[page].name} lastBtnIcon='action-menu'/>
+                    <div className="stm-bar__content"><Pages pages={pages} action={this.openPage}/></div>
                     <div className="stm-bar__button"><Button text='Добавить страницу' state='default-primary'/></div>
                 </div>
             )  
         } else if (nav === 1 && isPages) {
             return (
                 <div className="stm-bar">
-                    <HeaderBar firstBtnIcon='action-back' title={pages[page].modules[modul].name} lastBtnIcon='action-more' action={() => this.actionPage(nav - 1)}/>
-                    <div className="stm-bar__content"><CellList cells={pages[page].modules} icon='objects-modul' action={() => this.actionPage(2)}/></div>
+                    <Header firstBtnIcon='action-back' title={pages[page].modules[modul].name} lastBtnIcon='action-more' action={() => this.actionPage(nav - 1)}/>
+                    <div className="stm-bar__content"><Cells cells={pages[page].modules} icon='objects-modul' action={() => this.actionPage(2)}/></div>
                     <div className="stm-bar__button"><Button text='Добавить модуль' state='default-primary'/></div>
                 </div>
             )    
         } else if (nav === 1 && !isPages) {
             return (
                 <div className="stm-bar">
-                    <HeaderBar firstBtnIcon='action-publish' title={pages[page].name} lastBtnIcon='action-menu' action={() => this.actionPage(nav - 1)}/>
-                    <div className="stm-bar__content"><CellList cells={pages[page].modules} icon='objects-modul' action={() => this.actionPage(2)}/></div>
+                    <Header firstBtnIcon='action-publish' title={pages[page].name} lastBtnIcon='action-menu' action={() => this.actionPage(nav - 1)}/>
+                    <div className="stm-bar__content"><Cells cells={pages[page].modules} icon='objects-modul' action={() => this.actionPage(2)}/></div>
                     <div className="stm-bar__button"><Button text='Добавить модуль' state='default-primary'/></div>
                 </div>
             )    
         } else {
             return (
                 <div className="stm-bar">
-                    <HeaderBar firstBtnIcon='action-back' title={pages[page].modules[modul].sections[section].name} lastBtnIcon='action-more' action={() => this.actionPage(nav - 1)}/>
-                    <div className="stm-bar__content"><SectionList sections={pages[page].modules[modul].sections}/></div>
+                    <Header firstBtnIcon='action-back' title={pages[page].modules[modul].sections[section].name} lastBtnIcon='action-more' action={() => this.actionPage(nav - 1)}/>
+                    <div className="stm-bar__content"><Sections sections={pages[page].modules[modul].sections}/></div>
                     <div className="stm-bar__button"><Button text='Добавить секцию' state='default-primary'/></div>
                 </div>
             )    

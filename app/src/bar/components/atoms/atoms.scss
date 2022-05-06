@@ -11,9 +11,9 @@
     }
 }
 
-@include font('SF Pro Display', normal, 400, './fonts/SFProDisplayRegular.woff2');
-@include font('SF Pro Display', normal, 500, './fonts/SFProDisplayMedium.woff2');
-@include font('SF Pro Display', normal, 600, './fonts/SFProDisplaySemiBold.woff2');
+@include font('SF Pro Display', normal, 400, './fonts/sf-pro-display-regular.woff2');
+@include font('SF Pro Display', normal, 500, './fonts/sf-pro-display-medium.woff2');
+@include font('SF Pro Display', normal, 600, './fonts/sf-pro-display-semi-bold.woff2');
 
 // Typography
 
