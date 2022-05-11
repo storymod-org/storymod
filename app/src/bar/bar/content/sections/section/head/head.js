@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import './head.scss'
 
-import ButtonIcon from "../../../../components/button/button-icon"
+import ButtonIcon from "../../../../../components/button/button-icon"
 
 export default class Head extends Component {
 

@@ -1,7 +1,7 @@
 import React, {Component} from "react"
 import './style.scss'
 
-import InputContentText from "../../../../components/input/input-content-text"
+import InputContentText from "../../../../../components/input/input-content-text"
 
 export default class Style extends Component {
 

@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import ButtonMore from "../../components/button/button-more";
-import Cells from "../../components/cells/cells";
+import ButtonMore from "../../../components/button/button-more";
+import Cells from "../../../components/cells/cells";
 
 export default class Pages extends Component {
 

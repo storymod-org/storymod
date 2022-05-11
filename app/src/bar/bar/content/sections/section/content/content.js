@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import './content.scss'
 
 import Elements from "./elements/elements"
-import ButtonIcon from "../../../../components/button/button-icon"
+import ButtonIcon from "../../../../../components/button/button-icon"
 
 export default class Content extends Component {
 
