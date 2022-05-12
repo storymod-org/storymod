@@ -1,21 +1,27 @@
-@import '../atoms/atoms';
+@import '../../atoms/atoms';
 
 .stm-header-bar {
+
     width: 100%;
     height: 40px;
     display: flex;
     padding: 8px;
+
     &__text {
         width: 100%;
         text-align: center;
-        margin: 0 8px;
+        margin: 0 8px 0 32px;
         overflow: hidden;
+
         h3 {
+            margin: 0 auto;
             width: fit-content;
             @include h3;
             color: $content-sub-primary;
         }
+
     }
+
     > .stm-btn-icon {
         flex-shrink: 0;
     }

@@ -1,20 +1,20 @@
 import React, {Component} from "react";
 import './header.scss';
-import ButtonIcon from "../button/button-icon";
+import ButtonIcon from "../../button/button-icon";
 
 export default class Header extends Component {
 
     render() {
 
-        const {firstButton, text, lastButton} = this.props;
-        const className = `stm-header-bar`;
+        const {firstButton, title} = this.props;
+        const firstBtn = firstButton ? <ButtonIcon state='default-secondary' size='small' icon={firstButton.icon}/> : null
 
         return (
 
-            <div className={className}>
-                {<ButtonIcon state='default-secondary' size='small' icon={firstButton}/>}
-                <div className='stm-header-bar__text'><h3>{text}</h3></div>
-                {<ButtonIcon state='default-secondary' size='small' icon={lastButton}/>}
+            <div className='stm-header-bar'>
+                {firstBtn}
+                <div className='stm-header-bar__text'><h3>{title}</h3></div>
+                {<ButtonIcon state='default-secondary' size='small' icon='action-close'/>}
             </div>
 
         )

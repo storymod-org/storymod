@@ -18,7 +18,7 @@ export default class Cell extends Component {
         }
         if (disable) {
             className.push('stm-cell--disable');
-        }        
+        }
 
         return (
 

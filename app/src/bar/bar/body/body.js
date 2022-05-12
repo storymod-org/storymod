@@ -1,15 +1,29 @@
 import React, {Component} from "react";
+import './body.scss';
 
 import Pages from "./pages/pages";
 import Sections from './sections/sections'
+import Modules from "./modules/modules";
 import Button from '../../components/button/button'
-import Cells from "../../components/cells/cells";
+import Modals from "./modals/modals";
 
-export default class Content extends Component {
+export default class Body extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            createPage: false
+        }
+        this.createPage = this.createPage.bind(this)
+    }
+
+    createPage() {
+        this.setState({createPage: !this.state.createPage})
+    }
 
     render() {
 
-        const {nav, pages, page, modul} = this.props
+        const {nav, pages, page, modul, openPage, openModul} = this.props
 
         if (nav === 0) {
             return (
@@ -18,21 +32,23 @@ export default class Content extends Component {
                     content={
                         <Pages
                             pages={pages}
-                            action={this.openPage}/>}
+                            action={openPage}/>}
                     button={
                         <Button
                             text='Добавить страницу'
-                            state='default-primary'/>}/>)
+                            state='default-primary'
+                            action={this.createPage}/>}
+                    createPage={
+                            this.state.createPage}/>)
 
         } else if (nav === 1) {
             return (
 
                 <View 
                 content={
-                    <Cells
-                        cells={pages[page].modules}
-                        icon='objects-modul'
-                        action={() => this.actionPage(2)}/>}
+                    <Modules
+                        modules={pages[page].modules}
+                        action={openModul}/>}
                 button={
                     <Button
                         text='Добавить модуль'
@@ -54,14 +70,12 @@ export default class Content extends Component {
 
 }
 
-class View extends Component {
-    render() {
-        const {content, button} = this.props;
-        return (
-            <>
-                <div className="stm-bar__content">{content}</div>
-                <div className="stm-bar__button">{button}</div>
-            </>
-        )
-    }
+const View = ({content, button, createPage}) => {
+    return (
+        <>
+            <div className="stm-body__content">{content}</div>
+            <div className="stm-body__button">{button}</div>
+            <div className="stm-body__modals"><Modals createPage={createPage}/></div>
+        </>
+    )
 }

@@ -2,7 +2,7 @@ import React, {Component} from "react"
 import './bar.scss'
 
 import Header from "./bar/header/header"
-import Content from "./bar/content/content";
+import Body from "./bar/body/body";
 
 export default class Bar extends Component {
 
@@ -15,8 +15,9 @@ export default class Bar extends Component {
             modul: 0,
             section: 0
         }
-        this.openPage = this.openPage.bind(this)
         this.updateNav = this.updateNav.bind(this)
+        this.openPage = this.openPage.bind(this)
+        this.openModul = this.openModul.bind(this)
     }
 
     updateNav(nav) {
@@ -51,11 +52,14 @@ export default class Bar extends Component {
                     modul={modul}
                     isPages={isPages}
                     updateNav={this.updateNav}/>
-                <Content
+                <Body
                     nav={nav}
                     pages={config.pages}
                     page={page}
-                    modul={modul}/>
+                    modul={modul}
+                    openPage={this.openPage}
+                    openModul={this.openModul}/>
+
             </div>
         )
 

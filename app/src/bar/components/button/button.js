@@ -5,12 +5,13 @@ export default class Button extends Component {
 
     render() {
 
-        const {state, text} = this.props;
+        const {state, text, action} = this.props;
         const className = `stm-btn stm-btn--${state}`;
 
         return (
             <button
-            className={className}>
+            className={className}
+            onClick={action}>
             {text}</button>
         )
 

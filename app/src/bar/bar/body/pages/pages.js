@@ -8,17 +8,17 @@ export default class Pages extends Component {
         super(props)
         this.actions = [
             {
-                id: 1,
+                id: 0,
                 text: 'Изменить название',
                 action: console.log('Изменить название')
             },
             {
-                id: 2,
+                id: 1,
                 text: 'Изменить адрес',
                 action: console.log('Изменить адрес')
             },
             {
-                id: 3,
+                id: 2,
                 text: 'Удалить',
                 action: console.log('Удалить')
             }

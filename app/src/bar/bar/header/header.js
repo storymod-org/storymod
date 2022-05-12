@@ -54,6 +54,7 @@ class View extends Component {
         return (
 
             <div className="stm-header">
+
                 <div className="stm-header__first-btn">
 
                     <ButtonIcon
@@ -63,11 +64,11 @@ class View extends Component {
                         action={firstBtn.action}/>
 
                 </div>
+
                 <div className="stm-header__title">
-
                     <p>{title}</p>
-
                 </div>
+
                 <div className="stm-header__last-btn">
 
                     <ButtonIcon
@@ -77,6 +78,7 @@ class View extends Component {
                         action={lastBtn.action}/>
 
                 </div>  
+
             </div>
 
         )

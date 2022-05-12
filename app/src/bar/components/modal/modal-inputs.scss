@@ -1,0 +1,19 @@
+@import './modal';
+
+.modal-inputs {
+    &__label {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 8px;
+        > p {
+            width: max-content;
+            @include h3;
+        }
+    }
+    &__input {
+        margin-bottom: 16px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

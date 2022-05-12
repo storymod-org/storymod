@@ -8,13 +8,13 @@
 
         {
             "name": "Главная страница",
-            "id": 1,
+            "id": 0,
             "href": "index",
             "isMain": true,
 
             "modules" : [
                 {
-                    "id": 1,
+                    "id": 0,
                     "name": "Основной экран",
                     "component": "MainScreen",
                     "image": "house.jpg",
@@ -24,7 +24,7 @@
 
                     "sections": [
                         {
-                            "id": 1,
+                            "id": 0,
                             "name": "Gj",
                             "add": true,
                             "remove": true,
@@ -32,12 +32,12 @@
 
                             "styles": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 }
@@ -45,18 +45,18 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -64,18 +64,42 @@
     
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -93,37 +117,13 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
-                                            "type": "content-text",
-                                            "placeholder": "Введите текст"
-                                        }
-                                    ]
-    
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Заголовок",
-                            "add": true,
-                            "remove": true,
-                            "delited": true,
-
-                            "content": [
-                                {
-                                    "id": 1,
-                                    "name": "Заголовок",
-                                    "remove": true,
-    
-                                    "elements": [
-                                        {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -136,7 +136,7 @@
 
                 },
                 {
-                    "id": 2,
+                    "id": 1,
                     "name": "Основной экран",
                     "component": "MainScreen",
                     "image": "house.jpg",
@@ -146,7 +146,7 @@
 
                     "sections": [
                         {
-                            "id": 1,
+                            "id": 0,
                             "name": "Заголовок",
                             "add": true,
                             "remove": true,
@@ -154,12 +154,12 @@
 
                             "styles": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 }
@@ -167,18 +167,18 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -186,18 +186,42 @@
     
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -215,37 +239,13 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
-                                            "type": "content-text",
-                                            "placeholder": "Введите текст"
-                                        }
-                                    ]
-    
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Заголовок",
-                            "add": true,
-                            "remove": true,
-                            "delited": true,
-
-                            "content": [
-                                {
-                                    "id": 1,
-                                    "name": "Заголовок",
-                                    "remove": true,
-    
-                                    "elements": [
-                                        {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -261,13 +261,13 @@
         },
         {
             "name": "Каталог",
-            "id": 2,
+            "id": 1,
             "href": "index",
             "isMain": true,
 
             "modules" : [
                 {
-                    "id": 1,
+                    "id": 0,
                     "name": "Основной экран",
                     "component": "MainScreen",
                     "image": "house.jpg",
@@ -277,7 +277,7 @@
 
                     "sections": [
                         {
-                            "id": 1,
+                            "id": 0,
                             "name": "Gj",
                             "add": true,
                             "remove": true,
@@ -285,12 +285,12 @@
 
                             "styles": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 }
@@ -298,18 +298,18 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -317,18 +317,42 @@
     
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -346,37 +370,13 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
-                                            "type": "content-text",
-                                            "placeholder": "Введите текст"
-                                        }
-                                    ]
-    
-                                }
-                            ]
-                        },
-                        {
-                            "id": 3,
-                            "name": "Заголовок",
-                            "add": true,
-                            "remove": true,
-                            "delited": true,
-
-                            "content": [
-                                {
-                                    "id": 1,
-                                    "name": "Заголовок",
-                                    "remove": true,
-    
-                                    "elements": [
-                                        {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -389,7 +389,7 @@
 
                 },
                 {
-                    "id": 2,
+                    "id": 1,
                     "name": "Основной экран",
                     "component": "MainScreen",
                     "image": "house.jpg",
@@ -399,7 +399,7 @@
 
                     "sections": [
                         {
-                            "id": 1,
+                            "id": 0,
                             "name": "Заголовок",
                             "add": true,
                             "remove": true,
@@ -407,12 +407,12 @@
 
                             "styles": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "type": "content-text",
                                     "placeholder": "Введите текст"
                                 }
@@ -420,18 +420,18 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -439,18 +439,18 @@
     
                                 },
                                 {
-                                    "id": 2,
+                                    "id": 1,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         },
                                         {
-                                            "id": 2,
+                                            "id": 1,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
@@ -460,7 +460,7 @@
                             ]
                         },
                         {
-                            "id": 2,
+                            "id": 1,
                             "name": "Заголовок",
                             "add": true,
                             "remove": true,
@@ -468,13 +468,13 @@
 
                             "content": [
                                 {
-                                    "id": 1,
+                                    "id": 0,
                                     "name": "Заголовок",
                                     "remove": true,
     
                                     "elements": [
                                         {
-                                            "id": 1,
+                                            "id": 0,
                                             "type": "content-text",
                                             "placeholder": "Введите текст"
                                         }
