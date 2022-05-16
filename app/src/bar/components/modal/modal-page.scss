@@ -1,0 +1,21 @@
+@import '../atoms/atoms';
+
+.stm-modal-page {
+    width: 328px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: $bg-3;
+    border: 1px solid $content-back-1;
+    border-radius: 8px 8px 0 0;
+    display: none;
+    
+    &__content {
+        background-color: $bg-2;
+        border-radius: 8px 8px 0 0;
+    }
+
+    &--show {
+        display: block;
+    }
+}

@@ -1,8 +1,8 @@
 import React, {Component} from "react"
 import './bar.scss'
 
-import Header from "./bar/header/header"
-import Body from "./bar/body/body";
+import Header from "./bar/main-bar/header/header"
+import Body from "./bar/main-bar/body/body";
 
 export default class Bar extends Component {
 
@@ -10,10 +10,10 @@ export default class Bar extends Component {
         super(state);
         this.state = {
             isPages: true,
-            nav: 1, // pages = 0, modules = 1, modul = 2
+            nav: 0, // pages = 0, modules = 1, modul = 2
             page: 0,
             modul: 0,
-            section: 0
+            section: 0,
         }
         this.updateNav = this.updateNav.bind(this)
         this.openPage = this.openPage.bind(this)
@@ -40,7 +40,7 @@ export default class Bar extends Component {
 
     render() {
 
-        const {page, modul, section, nav, isPages} = this.state;
+        const {page, modul, nav, isPages} = this.state;
         const config = this.props.config;
         
         return (

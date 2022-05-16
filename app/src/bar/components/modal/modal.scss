@@ -3,20 +3,19 @@
 .modal {
 
     border: 1px solid $content-back-1;
-    position: absolute;
     border-radius: 8px;
     background: $bg-3;
     overflow: hidden;
 
     &--big {
         width: 400px;
-        left: calc(50% - 200px);
     }
 
     &--small {
         width: 312px;
-        left: calc(50% - 156px);
     }
+
+
 
     &__overlay {
         position: fixed;
@@ -24,13 +23,14 @@
         height: 100%;
         left: 0;
         top: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         background-color: rgba(0,0,0, .64);
         display: none;
-
         &--show {
-            display: block;
+            display: flex;
         }
-
     }
 
     &__body {

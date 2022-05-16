@@ -1,0 +1,33 @@
+@import '../../../components/atoms/atoms.scss';
+
+.stm-header {
+    display: flex;
+    height: 60px;
+    padding: 8px;
+    align-items: center;
+
+    &__title {
+        width: 100%;
+        margin: 0 8px;
+        overflow: hidden;
+        >p {
+            width: max-content;
+            margin: 0 auto;
+            @include h3;
+            color: $content-sub-primary;
+        }
+    }
+
+    &__publish {
+        flex-shrink: 0;
+    }
+
+    &__menu {
+        flex-shrink: 0;
+    }
+
+    &__last-btn {
+        position: relative;
+    }
+
+}

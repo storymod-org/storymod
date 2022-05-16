@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Аккаунт",
+        "icon": "account.svg",
+        "save": true,
+
+        "blocks": [
+            {
+                "name": ""
+            }
+        ]
+
+    }
+]

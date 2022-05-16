@@ -1,0 +1,8 @@
+@import '../../../../../components/atoms/atoms';
+
+.stm-section {
+    border-bottom: 1px solid $content-back-1;
+    &:last-child {
+        border-bottom: none;
+    }
+}
