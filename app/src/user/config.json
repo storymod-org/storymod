@@ -9,6 +9,7 @@
         {
             "name": "Главная страница",
             "id": 0,
+            "icon": "objects-page",
             "href": "index",
             "isMain": true,
 
@@ -16,6 +17,7 @@
                 {
                     "id": 0,
                     "name": "Основной экран",
+                    "icon": "objects-modul",
                     "component": "MainScreen",
                     "image": "house.jpg",
                     "title": "Теплый семейный дом c террасой за 30 дней",
@@ -138,6 +140,7 @@
                 {
                     "id": 1,
                     "name": "Основной экран",
+                    "icon": "objects-modul",
                     "component": "MainScreen",
                     "image": "house.jpg",
                     "title": "Юлька Дура",
@@ -262,6 +265,7 @@
         {
             "name": "Каталог",
             "id": 1,
+            "icon": "objects-page",
             "href": "index",
             "isMain": true,
 
@@ -269,6 +273,7 @@
                 {
                     "id": 0,
                     "name": "Основной экран",
+                    "icon": "objects-modul",
                     "component": "MainScreen",
                     "image": "house.jpg",
                     "title": "Теплый семейный дом c террасой за 30 дней",
@@ -391,6 +396,7 @@
                 {
                     "id": 1,
                     "name": "Основной экран",
+                    "icon": "objects-modul",
                     "component": "MainScreen",
                     "image": "house.jpg",
                     "title": "Юлька Дура",

@@ -3,6 +3,7 @@ import './bar.scss'
 
 import Header from "./bar/main-bar/header/header"
 import Body from "./bar/main-bar/body/body";
+import AccountSet from "./bar/settings/account-set/account-set";
 
 export default class Bar extends Component {
 
@@ -59,6 +60,7 @@ export default class Bar extends Component {
                     modul={modul}
                     openPage={this.openPage}
                     openModul={this.openModul}/>
+                <AccountSet/>
 
             </div>
         )

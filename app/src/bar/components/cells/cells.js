@@ -7,14 +7,14 @@ export default class Cells extends Component {
 
     render() {
 
-        const {cells, icon, action, option, type} = this.props;
+        const {cells, action, option, type} = this.props;
         let className = 'stm-cell-list';
 
         const elements = cells.map((item) => {
             return (
                 <Cell 
                     key={item.id} 
-                    icon={icon} 
+                    icon={item.icon} 
                     type={type}
                     text={item.name} 
                     option={option} 

@@ -55,12 +55,10 @@ export default class Body extends Component {
                             action={this.createPage}/>}
                     modal={
                         <Modal 
-                            big
+                            type="medium"
                             title='Создание страницы'
                             show={this.state.createPage}
-                            close={this.createPage}
-                            activeBtn={{
-                                text: 'Создать'}}>
+                            close={this.createPage}>
                             <ModalInputs
                                 inputs={[
                                     {id: 0,
@@ -69,7 +67,10 @@ export default class Body extends Component {
                                     {id: 1,
                                     label: 'Адрес страницы',
                                     placeholder: 'Введите адрес страницы'}
-                                ]}/>
+                                ]}
+                                activeBtn={{
+                                    text: 'Создать'}}
+                                close={this.createPage}/>
                         </Modal>
                     }/>)
 

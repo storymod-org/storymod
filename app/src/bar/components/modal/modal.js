@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 import './modal.scss'
 import Header from "./header/header"
-import Button from "../button/button"
 
 export default class Modal extends Component {
 
@@ -9,17 +8,21 @@ export default class Modal extends Component {
 
         const {
             title,
-            big,
+            type,
             headerBtn,
-            activeBtn,
             show,
             close,
             children} = this.props
 
         let className = 'modal'
-        big ? className += ' modal--big' : className += ' modal--small'
-
-
+        
+        if (type === 'small') {
+            className += ' modal--small'
+        } else if (type === 'medium') {
+            className += ' modal--medium'
+        } else {
+            className += ' modal--big'
+        }
 
         return (
 
@@ -32,16 +35,6 @@ export default class Modal extends Component {
                         close={close}/>
 
                     {children}
-
-                    <div className="modal__buttons">
-                        <Button
-                            state='default-secondary'
-                            text='Отмена'
-                            action={close}/>
-                        <Button
-                            state='accent'
-                            text={activeBtn.text}/>
-                    </div>
 
                 </div>
             </div>

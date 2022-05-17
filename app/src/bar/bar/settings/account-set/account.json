@@ -1,8 +1,36 @@
 [
     {
+        "id": 1,
         "name": "Аккаунт",
-        "icon": "account.svg",
+        "icon": "menu-account",
         "save": true,
+
+        "blocks": [
+            {
+                "name": ""
+            }
+        ]
+
+    },
+    {
+        "id": 2,
+        "name": "Подписка",
+        "icon": "menu-subscription",
+        "save": false,
+
+        "blocks": [
+            {
+                "name": ""
+            }
+        ]
+
+    },
+    {
+        "id": 3,
+        "name": "Настройки",
+        "icon": "menu-settings",
+        "save": false,
+        "disable": true,
 
         "blocks": [
             {
