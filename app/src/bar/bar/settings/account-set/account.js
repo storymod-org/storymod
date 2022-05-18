@@ -3,9 +3,10 @@ import React from 'react';
 import avatar from '../../../../user/media/avatar.jpeg'
 import InputImageSmall from "../../../components/input/input-image-small";
 import InputContentText from '../../../components/input/input-content-text';
+import InputSellectCell from '../../../components/input/input-sellect-cell';
 import Button from "../../../components/button/button";
 
-const Account = () => {
+const Account = ({activeEmail}) => {
     return (
 
         <div className='stm-account-set'>
@@ -25,14 +26,16 @@ const Account = () => {
 
                     <div className='stm-account-set__main-input__input'>
                         <InputContentText
-                            placeholder='Имя'/>
+                            placeholder='Введите имя'/>
                     </div>
 
                 </div>
 
                 <div>
-                    <InputContentText
-                        placeholder='E-Mail'/>
+                    <InputSellectCell
+                            name='E-Mail'
+                            value='kononovm33@gmail.com'
+                            active={activeEmail}/>
                 </div>
 
                 <div>

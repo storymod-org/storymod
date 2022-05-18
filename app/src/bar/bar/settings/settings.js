@@ -8,7 +8,7 @@ export default class Settings extends Component {
 
     render() {
 
-        const {elements, title, id, content} = this.props;
+        const {elements, title, id, content, cellAction, head} = this.props;
 
         const button = (
             <div className="stm-set-header__button">
@@ -28,7 +28,9 @@ export default class Settings extends Component {
                 <div className="stm-settings">
 
                     <div className="stm-settings__sidebar">
-                        <Cells cells={elements}/>
+                        <Cells 
+                            cells={elements}
+                            action={cellAction}/>
                     </div>
 
                     <div className="stm-settings__view">
@@ -36,10 +38,10 @@ export default class Settings extends Component {
                         <div className="stm-set-header">
 
                             <div className="stm-set-header__title">
-                                <h2>{elements[id].name}</h2>
+                                <h2>{head.name}</h2>
                             </div>
 
-                            {elements[id].save ? button : null}
+                            {head.save ? button : null}
 
                         </div>
 

@@ -41,4 +41,39 @@
         }
     }
 
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+
+        &__title {
+            overflow: hidden;
+            background-color: $bg-2;
+            > p {
+                width: max-content;
+                @include p1;
+                color: $content-sub-primary;
+            }
+        }
+
+        &__text {
+            overflow: hidden;
+            background-color: $bg-2;
+            > p {
+                width: max-content;
+                @include p1;
+                color: $content-primary;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            border-bottom: 1px dashed $content-back-1;
+            width: 100%;
+            left: 0;
+            bottom: 6px;
+        }
+    }
+
 }

@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import './cells.scss';
 
-import Cell from "../cell/cell";
+import Cell from "./cell/cell";
 
 export default class Cells extends Component {
 
@@ -18,7 +18,8 @@ export default class Cells extends Component {
                     type={type}
                     text={item.name} 
                     option={option} 
-                    action={() => action(item.id)}/>
+                    action={() => action(item.id)}
+                    active={item.active}/>
             )
         });
 

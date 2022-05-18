@@ -1,0 +1,21 @@
+@import '../../atoms/atoms';
+
+.stm-input-sellect-cell {
+
+    cursor: pointer;
+    display: flex;
+    padding: 12px;
+
+    &__name {
+        flex: 1;
+        margin-right: 8px;
+        overflow: hidden;
+        color: $content-disabled;
+    }
+
+    &__value {
+        flex: 1;
+        overflow: hidden;
+    }
+
+}
