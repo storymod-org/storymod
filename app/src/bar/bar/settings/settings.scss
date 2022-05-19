@@ -48,10 +48,16 @@
     }
 
     &__button {
+        width: 120px;
         position: absolute;
         top: 8px;
         right: 8px;
-        width: 120px;
+    }
+
+    &__back {
+        position: absolute;
+        top: 8px;
+        left: 8px;
     }
 
 }

@@ -39,6 +39,7 @@ export default class Body extends Component {
     render() {
 
         const {nav, pages, page, modul, openPage, openModul} = this.props
+        const {createPage, createModul} = this.state
 
         if (nav === 0) {
             return (
@@ -53,11 +54,10 @@ export default class Body extends Component {
                             text='Добавить страницу'
                             state='default-primary'
                             action={this.createPage}/>}
-                    modal={
+                    modal={createPage ? 
                         <Modal 
                             type="medium"
                             title='Создание страницы'
-                            show={this.state.createPage}
                             close={this.createPage}>
                             <ModalInputs
                                 inputs={[
@@ -71,7 +71,7 @@ export default class Body extends Component {
                                 activeBtn={{
                                     text: 'Создать'}}
                                 close={this.createPage}/>
-                        </Modal>
+                        </Modal> : null
                     }/>)
 
         } else if (nav === 1) {
@@ -87,13 +87,12 @@ export default class Body extends Component {
                         text='Добавить модуль'
                         state='default-primary'
                         action={this.createModul}/>}
-                modal={
+                modal={createModul ? 
                     <ModalPage
                         title='Выберите модуль'
                         icon='objects-modul'
                         cells={modules}
-                        show={this.state.createModul}
-                        close={this.createModul}/>
+                        close={this.createModul}/> : null
                 }/>)
 
         } else {

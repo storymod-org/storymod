@@ -6,7 +6,7 @@ import InputContentText from '../../../components/input/input-content-text';
 import InputSellectCell from '../../../components/input/input-sellect-cell';
 import Button from "../../../components/button/button";
 
-const Account = ({activeEmail}) => {
+const Account = ({setBody, setNav}) => {
     return (
 
         <div className='stm-account-set'>
@@ -33,19 +33,23 @@ const Account = ({activeEmail}) => {
 
                 <div>
                     <InputSellectCell
-                            name='E-Mail'
-                            value='kononovm33@gmail.com'
-                            active={activeEmail}/>
+                        name='E-Mail'
+                        value='kononovm33@gmail.com'
+                        active={() => setBody(1)}/>
                 </div>
 
                 <div>
-                    <InputContentText
-                        placeholder='Пароль'/>
+                    <InputSellectCell
+                        name='Пароль'
+                        value='•••••••••••'
+                        active={() => setBody(2)}/>
                 </div>
 
                 <div>
-                    <InputContentText
-                        placeholder='Подписка'/>
+                    <InputSellectCell
+                        name='Подписка'
+                        value='Бесплатно'
+                        active={() => setNav(1)}/>
                 </div>
 
             </div>

@@ -4,6 +4,7 @@ import './bar.scss'
 import Header from "./bar/main-bar/header/header"
 import Body from "./bar/main-bar/body/body";
 import AccountSet from "./bar/settings/account-set/account-set";
+import ProjectSet from "./bar/settings/project-set/project-set";
 
 export default class Bar extends Component {
 
@@ -15,10 +16,16 @@ export default class Bar extends Component {
             page: 0,
             modul: 0,
             section: 0,
+
+            setAccount: false,
+            setProject: false,
         }
         this.updateNav = this.updateNav.bind(this)
         this.openPage = this.openPage.bind(this)
         this.openModul = this.openModul.bind(this)
+        this.showSetAccount = this.showSetAccount.bind(this)
+        this.showSetProject = this.showSetProject.bind(this)
+        
     }
 
     updateNav(nav) {
@@ -39,9 +46,19 @@ export default class Bar extends Component {
         }) 
     }
 
+    showSetAccount() {
+        this.setState({setAccount: !this.state.setAccount})
+        console.log(this.state.setAccount)
+    }
+
+    showSetProject() {
+        this.setState({setProject: !this.state.setProject})
+        console.log(this.state.setProject)
+    }
+
     render() {
 
-        const {page, modul, nav, isPages} = this.state;
+        const {page, modul, nav, isPages, setAccount, setProject} = this.state;
         const config = this.props.config;
         
         return (
@@ -52,7 +69,8 @@ export default class Bar extends Component {
                     page={page}
                     modul={modul}
                     isPages={isPages}
-                    updateNav={this.updateNav}/>
+                    updateNav={this.updateNav}
+                    showSetAccount={this.showSetAccount}/>
                 <Body
                     nav={nav}
                     pages={config.pages}
@@ -60,8 +78,8 @@ export default class Bar extends Component {
                     modul={modul}
                     openPage={this.openPage}
                     openModul={this.openModul}/>
-                <AccountSet/>
-
+                {setAccount ? <AccountSet close={this.showSetAccount}/> : null}
+                {setProject ? <ProjectSet close={this.showSetProject}/> : null}
             </div>
         )
 

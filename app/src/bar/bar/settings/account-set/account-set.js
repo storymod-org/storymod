@@ -13,15 +13,8 @@ export default class AccountSet extends Component {
         super(props)
         this.state = {
 
-            active: 0,
-
-            head: {
-                name: 'Аккаунт',
-                save: false,
-                back: false
-            },
-
-            body: <Account activeEmail={this.activeEmail}/>,
+            active: 1,
+            body: 0,
 
             elements: [
                 {
@@ -29,21 +22,27 @@ export default class AccountSet extends Component {
                     active: true,
                     name: 'Аккаунт',
                     icon: 'menu-account',
-                    save: true,
-                    body: <Account activeEmail={this.activeEmail}/>,
 
-                    children: [
+                    body: [
                         {
                             id: 0,
-                            name: 'E-Mail',
+                            name: 'Аккаунт',
                             save: true,
-                            body: <Email/>
+                            component: <Account setBody={this.setBody} setNav={this.setNav}/>,
                         },
                         {
                             id: 1,
+                            name: 'E-Mail',
+                            save: true,
+                            component: <Email/>,
+                            back: true
+                        },
+                        {
+                            id: 2,
                             name: 'Пароль',
                             save: true,
-                            body: <Password/>
+                            component: <Password/>,
+                            back: true
                         },
                     ]
 
@@ -53,20 +52,45 @@ export default class AccountSet extends Component {
                     active: false,
                     name: 'Подписка',
                     icon: 'menu-subscription',
-                    save: false,
-                    body: <Subscription/>
+
+                    body: [
+                        {
+                            id: 0,
+                            name: 'Подписка',
+                            save: false,
+                            component: <Subscription/>
+                        }
+                    ]
                 },
                 {
                     id: 2,
                     active: false,
                     name: 'Настройки',
                     icon: 'menu-settings',
-                    save: false,
-                    body: <div>Placeholder</div>
+                    disable: true,
+
+                    body: [
+                        {
+                            id: 0,
+                            name: 'Настройки',
+                            save: false,
+                            component: <div>Placeholder</div>
+                        }
+                    ]
                 }
             ]
         }
         this.setNavigation = this.setNavigation.bind(this)
+        this.setBody = this.setBody.bind(this)
+        this.setNav = this.setNav.bind(this)
+    }
+
+    setBody = (body) => {
+        this.setState({body})
+    }
+
+    setNav = (active) => {
+        this.setState({active})
     }
 
     setNavigation(id) {
@@ -83,48 +107,27 @@ export default class AccountSet extends Component {
 
             return {
                 active: id,
-                elements: newCell
+                elements: newCell,
+                body: 0
             }
         })
     }
 
     render() {
 
-        const {active, accountPage} = this.state
-        let content;
-
-        // if (active === 0 && accountPage === 'main') {
-
-        //     content = <Account
-        //                 activeEmail={this.activeEmail}/>
-
-        // } else if (active === 0 && accountPage === 'email') {
-
-        //     content = <Email/>
-
-        // } else if (active === 0 && accountPage === 'password') {
-
-        //     content = <Password/>
-            
-        // }else if (active === 1) {
-
-        //     content = <Subscription/>
-
-        // } else if (active === 2) {
-        //     content = <div>Placeholder</div>
-        // } else {
-        //     content = <div>Ошибка</div>
-        // }
-
+        const {active, body, elements} = this.state
+        const {close} = this.props
+        
         return (
 
             <Settings
                 title='Настройки'
-                elements={this.state.elements}
-                id={this.state.active}
-                content={this.state.body}
-                head={this.state.head}
-                cellAction={this.setNavigation}/>
+                cells={elements}
+                body={elements[active].body[body]}
+                active={active}
+                cellAction={this.setNavigation}
+                setBody={this.setBody}
+                close={close}/>
 
         )
     }

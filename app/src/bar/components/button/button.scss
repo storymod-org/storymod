@@ -5,10 +5,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include b2;
     height: 44px;
     padding: 0 16px;
     border-radius: 4px;
+
+    >span {
+        @include b2;
+    }
 
     &--default-primary {
         background-color: $content-back-1;

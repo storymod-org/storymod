@@ -10,7 +10,6 @@ export default class Modal extends Component {
             title,
             type,
             headerBtn,
-            show,
             close,
             children} = this.props
 
@@ -26,7 +25,7 @@ export default class Modal extends Component {
 
         return (
 
-            <div className={`modal__overlay ${show ? 'modal__overlay--show' : ''}`}>
+            <div className='modal__overlay'>
                 <div className={className}>
 
                     <Header

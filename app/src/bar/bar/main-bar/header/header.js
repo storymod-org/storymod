@@ -20,7 +20,7 @@ export default class Header extends Component {
 
     render() {
 
-        const {config, nav, page, modul, isPages, updateNav} = this.props;
+        const {config, nav, page, modul, isPages, updateNav, showSetAccount} = this.props;
         let title = '';
 
         if (nav === 0) {
@@ -41,7 +41,8 @@ export default class Header extends Component {
                         action: null}}
                     lastBtn={{
                         icon: 'action-menu',
-                        action: this.showMenu}}/>
+                        action: this.showMenu}}
+                    showSetAccount={showSetAccount}/>
             )
         } else {
             return (
@@ -63,7 +64,7 @@ class View extends Component {
 
     render() {
 
-        const {firstBtn, lastBtn, title, mainMenu} = this.props;
+        const {firstBtn, lastBtn, title, mainMenu, showSetAccount} = this.props;
 
         return (
 
@@ -91,7 +92,7 @@ class View extends Component {
                         size='big'
                         action={lastBtn.action}/>
 
-                    {mainMenu ? <MainMenu/> : null}
+                    {mainMenu ? <MainMenu showSetAccount={showSetAccount}/> : null}
                     
                 </div>  
 
@@ -100,5 +101,3 @@ class View extends Component {
         )
     }
 }
-
-// {this.state.mainMenu ? <MainMenu/> : null}

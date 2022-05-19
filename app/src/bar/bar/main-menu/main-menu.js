@@ -6,11 +6,18 @@ import Button from "../../components/button/button";
 export default class MainMenu extends Component {
 
     render() {
+
+        const {showSetAccount} = this.props
+
         return (
             <div className="stm-main-menu">
 
                 <div className="stm-main-menu__header-wrap">
-                    <div className="stm-main-menu__header">
+
+                    <div
+                        onClick={showSetAccount}
+                        className="stm-main-menu__header">
+                            
                         <div className="stm-main-menu__avatar">
                             <img src={`${process.env.PUBLIC_URL}/user/${db.user.avatar}`} alt='avatar'/>
                         </div>
@@ -19,6 +26,7 @@ export default class MainMenu extends Component {
                             <p>{db.user.email}</p>
                         </div>
                     </div>
+
                 </div>
 
                 <div className="stm-main-menu__body">

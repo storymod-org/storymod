@@ -24,7 +24,8 @@ export default class Cell extends Component {
 
         <div 
             className={className.join(' ')} 
-            onClick={action}>
+            onClick={disable ? null : action}
+            disabled={disable}>
             <div className="stm-cell__icon"><img src={srcIcon} alt='Icon'/></div>
             <div className="stm-cell__text"><p>{text}</p></div>
             <div className="stm-cell__option">{option}</div>

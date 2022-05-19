@@ -12,7 +12,7 @@ export default class Button extends Component {
             <button
             className={className}
             onClick={action}>
-            {text}</button>
+            <span>{text}</span></button>
         )
 
     }

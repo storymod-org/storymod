@@ -7,10 +7,13 @@ export default class Cells extends Component {
 
     render() {
 
-        const {cells, action, option, type} = this.props;
+        const {cells, action, option, type, active} = this.props;
         let className = 'stm-cell-list';
 
         const elements = cells.map((item) => {
+
+            const activeID = active === item.id
+
             return (
                 <Cell 
                     key={item.id} 
@@ -19,7 +22,8 @@ export default class Cells extends Component {
                     text={item.name} 
                     option={option} 
                     action={() => action(item.id)}
-                    active={item.active}/>
+                    active={activeID}
+                    disable={item.disable}/>
             )
         });
 
