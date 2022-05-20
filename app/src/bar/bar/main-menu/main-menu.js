@@ -30,10 +30,10 @@ export default class MainMenu extends Component {
                 </div>
 
                 <div className="stm-main-menu__body">
-                    <div className="stm-main-menu__projects">
+                    <diçv className="stm-main-menu__projects">
                         <Projects
                             projects={db.projects}/>
-                    </div>
+                    </diçv>
                     <div className="stm-main-menu__button">
                         <Button
                             state='default-primary'

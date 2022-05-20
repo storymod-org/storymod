@@ -1,103 +1,90 @@
-import React, {Component} from "react"
+import React from 'react'
 import './header.scss'
 
 import ButtonIcon from '../../../components/button/button-icon'
-import MainMenu from '../../../bar/main-menu/main-menu'
 
-export default class Header extends Component {
+const Header = (
+	config,
+	nav,
+	isPages,
+	usePublishSet,
+	useMainMenu,
+	updateNav) => {
 
-    constructor(props) {
-        super(props)
-        this.state = {
-            mainMenu: false
-        }
-        this.showMenu = this.showMenu.bind(this)
-    }
+	const title = () => {
 
-    showMenu() {
-        this.setState({mainMenu: !this.state.mainMenu})
-    }
+		switch(nav) {
 
-    render() {
+		case 0:
+			return config.info.name
+		case 1:
+			return config.pages[nav.page].name
+		case 2:
+			return config.pages[nav.page].modules[nav.modul].name
+		default:
+			return 'Placeholder'
+		}
 
-        const {config, nav, page, modul, isPages, updateNav, showSetAccount} = this.props;
-        let title = '';
+	}
 
-        if (nav === 0) {
-            title = config.info.name
-        } else if (nav === 1) {
-            title = config.pages[page].name
-        } else {
-            title = config.pages[page].modules[modul].name
-        }
+	return (isPages & (nav === 0)) || (!isPages & (nav === 1)) ? (
 
-        if ((isPages & (nav === 0)) || (!isPages & (nav === 1))) {
-            return (
-                <View 
-                    mainMenu={this.state.mainMenu}
-                    title={title}
-                    firstBtn={{
-                        icon: 'action-publish',
-                        action: null}}
-                    lastBtn={{
-                        icon: 'action-menu',
-                        action: this.showMenu}}
-                    showSetAccount={showSetAccount}/>
-            )
-        } else {
-            return (
-                <View
-                    title={title}
-                    firstBtn={{
-                        icon: 'action-back',
-                        action: () => updateNav(nav - 1)}}
-                    lastBtn={{
-                        icon: 'action-more',
-                        action: () => console.log('More')}}/>
-            )
-        }
-    }
+		<View 
+			title={title}
+			firstBtn={{
+				icon: 'action-publish',
+				action: usePublishSet}}
+			lastBtn={{
+				icon: 'action-menu',
+				action: useMainMenu}}/>
+
+	) : (
+
+		<View
+			title={title}
+			firstBtn={{
+				icon: 'action-back',
+				action: () => updateNav(nav - 1)}}
+			lastBtn={{
+				icon: 'action-more',
+				action: () => console.log('More')}}/>
+	)
 
 }
 
-class View extends Component {
+const View = ({firstBtn, lastBtn, title}) => {
 
-    render() {
+	return (
 
-        const {firstBtn, lastBtn, title, mainMenu, showSetAccount} = this.props;
+		<div className="stm-header">
 
-        return (
+			<div className="stm-header__first-btn">
 
-            <div className="stm-header">
+				<ButtonIcon
+					icon={firstBtn.icon}
+					state='default-secondary'
+					size='big'
+					action={firstBtn.action}/>
 
-                <div className="stm-header__first-btn">
+			</div>
 
-                    <ButtonIcon
-                        icon={firstBtn.icon}
-                        state='default-secondary'
-                        size='big'
-                        action={firstBtn.action}/>
+			<div className="stm-header__title">
+				<p>{title}</p>
+			</div>
 
-                </div>
+			<div className="stm-header__last-btn">
 
-                <div className="stm-header__title">
-                    <p>{title}</p>
-                </div>
+				<ButtonIcon
+					icon={lastBtn.icon}
+					state='default-secondary'
+					size='big'
+					action={lastBtn.action}/>
+			
+			</div>  
 
-                <div className="stm-header__last-btn">
+		</div>
 
-                    <ButtonIcon
-                        icon={lastBtn.icon}
-                        state='default-secondary'
-                        size='big'
-                        action={lastBtn.action}/>
-
-                    {mainMenu ? <MainMenu showSetAccount={showSetAccount}/> : null}
-                    
-                </div>  
-
-            </div>
-
-        )
-    }
+	)
 }
+
+export default Header

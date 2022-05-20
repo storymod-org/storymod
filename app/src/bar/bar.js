@@ -1,88 +1,67 @@
-import React, {Component} from "react"
+import React, {Component} from 'react'
 import './bar.scss'
 
-import Header from "./bar/main-bar/header/header"
-import Body from "./bar/main-bar/body/body";
-import AccountSet from "./bar/settings/account-set/account-set";
-import ProjectSet from "./bar/settings/project-set/project-set";
+import MainBar from './bar/main-bar/main-bar'
+import MainMenu from './bar/main-menu/main-menu'
+import AccountSet from './bar/account-set/account-set'
+import ProjectSet from './bar/project-set/project-set'
+import PublishSet from './bar/publish-set/publish-set'
+import TarifPage from './bar/tarif-page/tarif-page'
 
 export default class Bar extends Component {
 
-    constructor(state) {
-        super(state);
-        this.state = {
-            isPages: true,
-            nav: 0, // pages = 0, modules = 1, modul = 2
-            page: 0,
-            modul: 0,
-            section: 0,
+	state = {
 
-            setAccount: false,
-            setProject: false,
-        }
-        this.updateNav = this.updateNav.bind(this)
-        this.openPage = this.openPage.bind(this)
-        this.openModul = this.openModul.bind(this)
-        this.showSetAccount = this.showSetAccount.bind(this)
-        this.showSetProject = this.showSetProject.bind(this)
-        
-    }
+		isPages: true,
 
-    updateNav(nav) {
-        this.setState({nav})
-    }
+		isMainMenu: false,
+		isAccountSet: false,
+		isProjectSet: false,
+		isPublishSet: false,
+		isTarifPage: false
+	}
 
-    openPage(id) {
-        this.setState({
-            nav: 1,
-            page: id
-        })
-    }
+	useMainMenu() {
+		this.setState({isMainMenu: !this.state.isMainMenu})
+	}
 
-    openModul(id) {
-        this.setState({
-            nav: 2,
-            page: id
-        }) 
-    }
+	useAccountSet() {
+		this.setState({isAccountSet: !this.state.isAccountSet})
+	}
 
-    showSetAccount() {
-        this.setState({setAccount: !this.state.setAccount})
-        console.log(this.state.setAccount)
-    }
+	useProjectSet() {
+		this.setState({isProjectSet: !this.state.isProjectSet})
+	}
 
-    showSetProject() {
-        this.setState({setProject: !this.state.setProject})
-        console.log(this.state.setProject)
-    }
+	usePublishSet() {
+		this.setState({isPublishSet: !this.state.isPublishSet})
+	}
 
-    render() {
+	useTarifPage() {
+		this.setState({isTarifPage: !this.state.isTarifPage})
+	}
 
-        const {page, modul, nav, isPages, setAccount, setProject} = this.state;
-        const config = this.props.config;
-        
-        return (
-            <div className="stm-bar">
-                <Header
-                    config={config}
-                    nav={nav}
-                    page={page}
-                    modul={modul}
-                    isPages={isPages}
-                    updateNav={this.updateNav}
-                    showSetAccount={this.showSetAccount}/>
-                <Body
-                    nav={nav}
-                    pages={config.pages}
-                    page={page}
-                    modul={modul}
-                    openPage={this.openPage}
-                    openModul={this.openModul}/>
-                {setAccount ? <AccountSet close={this.showSetAccount}/> : null}
-                {setProject ? <ProjectSet close={this.showSetProject}/> : null}
-            </div>
-        )
+	render() {
 
-    }
+		const {isPages, isMainMenu, isAccountSet, isProjectSet, isPublishSet, isTarifPage} = this.state
+		const {activeItem, config} = this.props
+
+		return (
+			<div className="stm-bar">
+
+				<MainBar 
+					activeItem={activeItem}
+					config={config}
+					isPages={isPages}/>
+				{isMainMenu   ? <MainMenu   use={this.useMainMenu}/>   : null}
+				{isAccountSet ? <AccountSet use={this.useAccountSet}/> : null}
+				{isProjectSet ? <ProjectSet use={this.useProjectSet}/> : null}
+				{isPublishSet ? <PublishSet use={this.usePublishSet}/> : null}
+				{isTarifPage  ? <TarifPage  use={this.useTarifPage}/>  : null}
+
+			</div>
+		)
+
+	}
 
 }
