@@ -1,131 +1,33 @@
-import React, {Component} from "react";
-import './body.scss';
+import React from 'react'
+import './body.scss'
 
-import modules from '../../../../project/project.json';
-
-import Pages from "./pages/pages";
+import Pages from './pages/pages'
+import Modules from './modules/modules'
 import Sections from './sections/sections'
-import Modules from "./modules/modules";
-import Button from '../../../components/button/button'
-import Modal from "../../../components/modal/modal";
-import ModalPage from "../../../components/modal/modal-page";
-import ModalInputs from "../../../components/modal/modal-inputs";
 
-export default class Body extends Component {
+const Body = ({nav}) => {
 
-	constructor(props) {
-		super(props)
-		this.state = {
-			createPage: false,
-			createModul: false
-		}
-		this.createPage = this.createPage.bind(this)
-		this.createModul = this.createModul.bind(this)
-		this.createSection = this.createSection.bind(this)
-	}
+	const body = () => {
 
-	createPage() {
-		this.setState({createPage : !this.state.createPage})
-	}
+		switch(nav) {
 
-	createModul() {
-		this.setState({createModul : !this.state.createModul})
-	}
-
-	createSection() {
-		this.setState({createSection : !this.state.createSection})
-	}
-
-	render() {
-
-		const {nav, pages, page, modul, openPage, openModul} = this.props
-		const {createPage, createModul} = this.state
-
-		if (nav === 0) {
-			return (
-				
-				<View 
-					content={
-						<Pages
-							pages={pages}
-							action={openPage}/>}
-					button={
-						<Button
-							text='Добавить страницу'
-							state='default-primary'
-							action={this.createPage}/>}
-					modal={createPage ? 
-						<Modal 
-							type="medium"
-							title='Создание страницы'
-							close={this.createPage}>
-							<ModalInputs
-								inputs={[
-									{id: 0,
-									label: 'Назвоние страницы',
-									placeholder: 'Введите название страницы'},
-									{id: 1,
-									label: 'Адрес страницы',
-									placeholder: 'Введите адрес страницы'}
-								]}
-								activeBtn={{
-									text: 'Создать'}}
-								close={this.createPage}/>
-						</Modal> : null
-					}/>)
-
-		} else if (nav === 1) {
-			return (
-
-				<View 
-				content={
-					<Modules
-						modules={pages[page].modules}
-						action={openModul}/>}
-				button={
-					<Button
-						text='Добавить модуль'
-						state='default-primary'
-						action={this.createModul}/>}
-				modal={createModul ? 
-					<ModalPage
-						title='Выберите модуль'
-						icon='objects-modul'
-						cells={modules}
-						close={this.createModul}/> : null
-				}/>)
-
-		} else {
-			return (
-
-				<View 
-				content={
-					<Sections
-						sections={pages[page].modules[modul].sections}/>}
-				button={
-					<Button
-						text='Добавить секцию'
-						state='default-primary'
-						action={this.createSection}/>}
-				modal={
-					<ModalPage
-						title='Выберите секцию'
-						icon='objects-section'
-						cells={modules[modul].sections}
-						show={this.state.createSection}
-						close={this.createSection}/>
-				}/>)             
+		case 0:
+			return <Pages/>
+		case 1:
+			return <Modules/>
+		case 3:
+			return <Sections/>
+		default:
+			<div>Placeholder</div>		
 		}
 	}
 
-}
-
-const View = ({content, button, modal}) => {
 	return (
-		<>
-			<div className="stm-body__content">{content}</div>
-			<div className="stm-body__button">{button}</div>
-			<div className="stm-body__modals">{modal}</div>
-		</>
+		<div className='stm-body'>
+			{body}
+		</div>
 	)
+
 }
+
+export default Body

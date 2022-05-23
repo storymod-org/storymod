@@ -1,0 +1,10 @@
+@import '../../components/atoms/atoms.scss';
+
+.stm-main-bar {
+    height: 100%;
+    background-color: $bg-3;
+    border-left: 1px solid $content-back-1;
+    color: $content-primary;
+    font-family: $font;
+    position: relative;
+}

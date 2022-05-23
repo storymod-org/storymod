@@ -1,15 +1,13 @@
 import React, {Component} from 'react'
 import './main-bar.scss'
 
-import Header from './bar/main-bar/header/header'
-import Pages from './pages/pages'
-import Modules from './modules/modules'
-import Sections from './sections/sections'
+import Header from './header/header'
+import Body from './body/body'
 
 export default class MainBar extends Component {
 
 	state = {
-		nav: 0
+		nav: 0,
 	}
 
 	updateNav(nav) {
@@ -19,22 +17,17 @@ export default class MainBar extends Component {
 	render() {
 
 		const {nav} = this.state
-		const {config, isPages} = this.props
-	
-		const body = () => {
 
-			switch(nav) {
+		const {
 
-			case 0:
-				return <Pages/>
-			case 1:
-				return <Modules/>
-			case 3:
-				return <Sections/>
-			default:
-				<div>Placeholder</div>		
-			}
-		}
+			config,
+			isPages,
+			
+			usePublishSet,
+			useMainMenu,
+			showActions
+
+		} = this.props
 
 		return (
 
@@ -47,11 +40,12 @@ export default class MainBar extends Component {
 
 					updateNav={this.updateNav}
 					usePublishSet={usePublishSet}
-					useMainMenu={useMainMenu}/>
+					useMainMenu={useMainMenu}
+					showActions={showActions}/>
 
-				<div className='stm-main-bar__body'>
-					{body}
-				</div>
+				<Body
+					nav={nav}
+					updateNav={this.updateNav}/>
 	
 			</div>
 

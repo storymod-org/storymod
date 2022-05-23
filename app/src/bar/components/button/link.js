@@ -1,23 +1,23 @@
-import React, {Component} from "react";
-import './link.scss';
+import React, {Component} from 'react'
+import './link.scss'
 
 export default class Link extends Component {
 
-    render() {
+	render() {
 
-        const {size, text, link} = this.props,
-              className = `stm-link stm-link--${size}`;
+		const {size, text, link} = this.props
+		const className = `stm-link stm-link--${size}`
 
-        return (
+		return (
 
-            <a
-            href={link}
-            className={className}>
-            {text}
-            </a>
+			<a
+				href={link}
+				className={className}>
+				{text}
+			</a>
 
-        )
+		)
 
-    }
+	}
 
 }

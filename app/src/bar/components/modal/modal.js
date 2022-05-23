@@ -1,43 +1,43 @@
-import React, {Component} from "react"
+import React, {Component} from 'react'
 import './modal.scss'
-import Header from "./header/header"
+import Header from './header/header'
 
 export default class Modal extends Component {
 
-    render() {
+	render() {
 
-        const {
-            title,
-            type,
-            headerBtn,
-            close,
-            children} = this.props
+		const {
+			title,
+			type,
+			headerBtn,
+			close,
+			children} = this.props
 
-        let className = 'modal'
-        
-        if (type === 'small') {
-            className += ' modal--small'
-        } else if (type === 'medium') {
-            className += ' modal--medium'
-        } else {
-            className += ' modal--big'
-        }
+		let className = 'modal'
+		
+		if (type === 'small') {
+			className += ' modal--small'
+		} else if (type === 'medium') {
+			className += ' modal--medium'
+		} else {
+			className += ' modal--big'
+		}
 
-        return (
+		return (
 
-            <div className='modal__overlay'>
-                <div className={className}>
+			<div className='modal__overlay'>
+				<div className={className}>
 
-                    <Header
-                        title={title}
-                        firstButton={headerBtn}
-                        close={close}/>
+					<Header
+						title={title}
+						firstButton={headerBtn}
+						close={close}/>
 
-                    {children}
+					{children}
 
-                </div>
-            </div>
-        )
-    }
+				</div>
+			</div>
+		)
+	}
 
 }

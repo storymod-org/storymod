@@ -1,134 +1,63 @@
-import React, {Component} from "react";
-import './account-set.scss';
-import Settings from "../settings";
+import React, {Component} from 'react'
+import './account-set.scss'
 
-import Account from "./account";
-import Email from "./email";
-import Password from "./password";
-import Subscription from "./subscription";
+import ModalSettings from '../../components/modal/modal-settings/modal-settings'
+import elements from './elements'
 
 export default class AccountSet extends Component {
 
-    constructor(props) {
-        super(props)
-        this.state = {
+	state = {
 
-            active: 1,
-            body: 0,
+		active: 0,
+		children: 0,
+		elements: elements
 
-            elements: [
-                {
-                    id: 0,
-                    active: true,
-                    name: 'Аккаунт',
-                    icon: 'menu-account',
+	}
 
-                    body: [
-                        {
-                            id: 0,
-                            name: 'Аккаунт',
-                            save: true,
-                            component: <Account setBody={this.setBody} setNav={this.setNav}/>,
-                        },
-                        {
-                            id: 1,
-                            name: 'E-Mail',
-                            save: true,
-                            component: <Email/>,
-                            back: true
-                        },
-                        {
-                            id: 2,
-                            name: 'Пароль',
-                            save: true,
-                            component: <Password/>,
-                            back: true
-                        },
-                    ]
+	setBody = (body) => {
+		this.setState({body})
+	}
 
-                },
-                {
-                    id: 1,
-                    active: false,
-                    name: 'Подписка',
-                    icon: 'menu-subscription',
+	setNav = (active) => {
+		this.setState({active})
+	}
 
-                    body: [
-                        {
-                            id: 0,
-                            name: 'Подписка',
-                            save: false,
-                            component: <Subscription/>
-                        }
-                    ]
-                },
-                {
-                    id: 2,
-                    active: false,
-                    name: 'Настройки',
-                    icon: 'menu-settings',
-                    disable: true,
+	setNavigation(id) {
 
-                    body: [
-                        {
-                            id: 0,
-                            name: 'Настройки',
-                            save: false,
-                            component: <div>Placeholder</div>
-                        }
-                    ]
-                }
-            ]
-        }
-        this.setNavigation = this.setNavigation.bind(this)
-        this.setBody = this.setBody.bind(this)
-        this.setNav = this.setNav.bind(this)
-    }
+		this.setState(({elements}) => {
 
-    setBody = (body) => {
-        this.setState({body})
-    }
+			const resetCells = elements.map((cells) => {
+				const cell = {...cells, active: false}
+				return cell
+			})
 
-    setNav = (active) => {
-        this.setState({active})
-    }
+			const activeCell = {...elements[id], active: true}
+			const newCell = [...resetCells.slice(0, id), activeCell, ...resetCells.slice(id + 1)];
 
-    setNavigation(id) {
+			return {
+				active: id,
+				elements: newCell,
+				body: 0
+			}
+		})
+	}
 
-        this.setState(({elements}) => {
+	render() {
 
-            const resetCells = elements.map((cells) => {
-                const cell = {...cells, active: false}
-                return cell
-            })
+		const {active, body, elements} = this.state
+		const {useAccountSet} = this.props
+		
+		return (
 
-            const activeCell = {...elements[id], active: true}
-            const newCell = [...resetCells.slice(0, id), activeCell, ...resetCells.slice(id + 1)];
+			<ModalSettings
+				title='Настройки'
+				cells={elements}
+				body={elements[active].body[body]}
+				active={active}
+				cellAction={this.setNavigation}
+				setBody={this.setBody}
+				close={useAccountSet}/>
 
-            return {
-                active: id,
-                elements: newCell,
-                body: 0
-            }
-        })
-    }
-
-    render() {
-
-        const {active, body, elements} = this.state
-        const {close} = this.props
-        
-        return (
-
-            <Settings
-                title='Настройки'
-                cells={elements}
-                body={elements[active].body[body]}
-                active={active}
-                cellAction={this.setNavigation}
-                setBody={this.setBody}
-                close={close}/>
-
-        )
-    }
+		)
+	}
 }

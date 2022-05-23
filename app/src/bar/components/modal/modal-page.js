@@ -1,25 +1,25 @@
-import React from "react";
-import './modal-page.scss';
+import React from 'react'
+import './modal-page.scss'
 
-import Header from "./header/header";
-import Cells from "../cells/cells";
+import Header from './header/header'
+import Cells from '../cells/cells'
 
 const ModalPage = ({cells, title, icon, show, close}) => {
 
-    return (
+	return (
 
-        <div className={`stm-modal-page ${show ? 'stm-modal-page--show' : ''}`}>
-            <Header
-                title={title}
-                close={close}/>
-            <div className="stm-modal-page__content">
-                <Cells
-                    cells={cells}
-                    icon={icon}/>
-            </div>
-        </div>
-    )
+		<div className={`stm-modal-page ${show ? 'stm-modal-page--show' : ''}`}>
+			<Header
+				title={title}
+				close={close}/>
+			<div className="stm-modal-page__content">
+				<Cells
+					cells={cells}
+					icon={icon}/>
+			</div>
+		</div>
+	)
 
 }
 
-export default ModalPage;
+export default ModalPage

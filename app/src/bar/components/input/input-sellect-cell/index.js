@@ -1,2 +1,2 @@
-import InputSellectCell from "./input-sellect-cell";
+import InputSellectCell from './input-sellect-cell'
 export default InputSellectCell

@@ -1,22 +1,22 @@
-import React from "react";
-import './input-sellect-cell.scss';
+import React from 'react'
+import './input-sellect-cell.scss'
 
 const InputSellectCell = ({name, value, active}) => {
-    return (
+	return (
 
-        <div onClick={active} className='stm-input stm-input-sellect-cell'>
-        
-            <div className='stm-input-sellect-cell__name'>
-                <p>{name}</p>
-            </div>
+		<div onClick={active} className='stm-input stm-input-sellect-cell'>
+		
+			<div className='stm-input-sellect-cell__name'>
+				<p>{name}</p>
+			</div>
 
-            <div className='stm-input-sellect-cell__value'>
-                <p>{value}</p>
-            </div>
+			<div className='stm-input-sellect-cell__value'>
+				<p>{value}</p>
+			</div>
 
-        </div>
+		</div>
 
-    )
+	)
 }
 
 export default InputSellectCell

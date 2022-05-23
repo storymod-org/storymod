@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import './bar.scss'
 
 import MainBar from './bar/main-bar/main-bar'
 import MainMenu from './bar/main-menu/main-menu'
@@ -19,6 +18,7 @@ export default class Bar extends Component {
 		isProjectSet: false,
 		isPublishSet: false,
 		isTarifPage: false
+
 	}
 
 	useMainMenu() {
@@ -41,25 +41,50 @@ export default class Bar extends Component {
 		this.setState({isTarifPage: !this.state.isTarifPage})
 	}
 
+	showActions() {
+		console.log('Show Actions')
+	}
+
 	render() {
 
-		const {isPages, isMainMenu, isAccountSet, isProjectSet, isPublishSet, isTarifPage} = this.state
-		const {activeItem, config} = this.props
+		const {
+
+			isPages,
+			isMainMenu,
+			isAccountSet,
+			isProjectSet,
+			isPublishSet,
+			isTarifPage
+
+		} = this.state
+
+		const {
+
+			activeItem,
+			config
+
+		} = this.props
 
 		return (
-			<div className="stm-bar">
+			<>
 
-				<MainBar 
+				<MainBar
+				
 					activeItem={activeItem}
 					config={config}
-					isPages={isPages}/>
+					isPages={isPages}
+
+					usePublishSet={this.usePublishSet}
+					useMainMenu={this.useMainMenu}
+					showActions={this.showActions}/>
+
 				{isMainMenu   ? <MainMenu   use={this.useMainMenu}/>   : null}
 				{isAccountSet ? <AccountSet use={this.useAccountSet}/> : null}
 				{isProjectSet ? <ProjectSet use={this.useProjectSet}/> : null}
 				{isPublishSet ? <PublishSet use={this.usePublishSet}/> : null}
 				{isTarifPage  ? <TarifPage  use={this.useTarifPage}/>  : null}
 
-			</div>
+			</>
 		)
 
 	}

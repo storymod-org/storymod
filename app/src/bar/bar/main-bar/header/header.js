@@ -3,13 +3,18 @@ import './header.scss'
 
 import ButtonIcon from '../../../components/button/button-icon'
 
-const Header = (
+const Header = ({
+		
 	config,
 	nav,
 	isPages,
+
 	usePublishSet,
 	useMainMenu,
-	updateNav) => {
+	updateNav,
+	showActions
+
+}) => {
 
 	const title = () => {
 
@@ -47,7 +52,7 @@ const Header = (
 				action: () => updateNav(nav - 1)}}
 			lastBtn={{
 				icon: 'action-more',
-				action: () => console.log('More')}}/>
+				action: showActions}}/>
 	)
 
 }
