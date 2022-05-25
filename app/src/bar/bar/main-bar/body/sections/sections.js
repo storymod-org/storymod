@@ -7,10 +7,12 @@ import ModalPage from '../../../../components/modal/modal-page'
 
 export default class Sections extends Component {
 
-	state = {
-
-		createSection: false
-
+	constructor(props) {
+		super(props)
+		this.state = {
+			createSection: false
+		}
+		this.createSection = this.createSection.bind(this)
 	}
 
 	createSection() {
@@ -19,13 +21,14 @@ export default class Sections extends Component {
 
 	render() {
 
+		const {createSection} = this.state
 		const {sections} = this.props
 
 		if(!sections) {
 			console.log('Error')
 		}
 
-		const elements = sections.map((section) => {
+		const sectionsRender = sections.map((section) => {
 			return (
 				<Section key={section.id} section={section}/>
 			)
@@ -34,30 +37,30 @@ export default class Sections extends Component {
 		return (
 
 			<div className='stm-body-sections'>
-			
-				<div className='stm-body-sections__content'>
 
-					<div className="stm-body-sections__list">
-						{elements}
-					</div>
+				<div className="stm-body-sections__content">
+					{sectionsRender}
+				</div>
 
-					<div className='stm-body-sections__content'>
-						<Button
-							text='Добавить секцию'
-							state='default-primary'
-							action={this.createSection}/>
-					</div>
+				<div className='stm-body-sections__button'>
 
-					<div className='stm-body-sections__modal'>
+					<Button
+						text='Добавить секцию'
+						state='default-primary'
+						action={this.createSection}/>
+						
+				</div>
 
+				<div className='stm-body-sections__modal'>
+
+					{createSection ? 
+					
 						<ModalPage
 							title='Выберите секцию'
 							icon='objects-section'
 							cells={sections}
-							close={this.createSection}/>
-							
-					</div>
-
+							close={this.createSection}/> : null}
+						
 				</div>
 
 			</div>

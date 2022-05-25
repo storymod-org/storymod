@@ -23,18 +23,21 @@ $font: 'SF Pro Display', sans-serif;
 	font-size: 24px;
 	line-height: 24px;
 	font-weight: 500;
+	font-family: $font;
 	width: max-content;
 }
 @mixin h2 {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 500;
+	font-family: $font;
 	width: max-content;
 }
 @mixin h3 {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 500;
+	font-family: $font;
 	width: max-content;
 }
 
@@ -42,12 +45,14 @@ $font: 'SF Pro Display', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 400;
+	font-family: $font;
 	width: max-content;
 }
 @mixin p2 {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
+	font-family: $font;
 	width: max-content;
 }
 
@@ -55,24 +60,28 @@ $font: 'SF Pro Display', sans-serif;
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: 600;
+	font-family: $font;
 	width: max-content;
 }
 @mixin b2 {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 600;
+	font-family: $font;
 	width: max-content;
 }
 @mixin label {
 	font-size: 12px;
 	line-height: 12px;
 	font-weight: 500;
+	font-family: $font;
 	width: max-content;
 }
 @mixin placeholder {
 	font-size: 12px;
 	line-height: 20px;
 	font-weight: 400;
+	font-family: $font;
 	width: max-content;
 }
 

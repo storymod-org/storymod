@@ -1,0 +1,23 @@
+[
+    {
+        "id": 0,
+        "active": true,
+        "name": "Storycrafter",
+        "href": "storycrafter.ru",
+        "logo": "logo.jpeg"
+    },
+    {
+        "id": 1,
+        "active": false,
+        "name": "Storycrafter",
+        "href": "storycrafter.ru",
+        "logo": "logo.jpeg"
+    },
+    {
+        "id": 2,
+        "active": false,
+        "name": "Storycrafter",
+        "href": "storycrafter.ru",
+        "logo": "logo.jpeg"
+    }
+]

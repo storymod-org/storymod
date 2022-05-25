@@ -7,7 +7,6 @@ const Header = ({
 		
 	config,
 	projectNav,
-	barNav,
 	isPages,
 
 	updateNav,
@@ -20,7 +19,7 @@ const Header = ({
 
 	const title = () => {
 
-		switch(barNav) {
+		switch(projectNav.nav) {
 
 		case 0:
 			return config.info.name
@@ -34,11 +33,9 @@ const Header = ({
 
 	}
 
-	const actions = (barNav === 1) ? useActionModul : useActionSection
+	const actions = (projectNav.nav === 1) ? useActionModul : useActionSection
 
-	console.log(title())
-
-	return (isPages & (barNav === 0)) || (!isPages & (barNav === 1)) ? (
+	return (isPages & (projectNav.nav === 0)) || (!isPages & (projectNav.nav === 1)) ? (
 
 		<View 
 			title={title()}
@@ -55,7 +52,7 @@ const Header = ({
 			title={title()}
 			firstBtn={{
 				icon: 'action-back',
-				action: () => updateNav(barNav - 1)}}
+				action: () => updateNav(projectNav.nav - 1)}}
 			lastBtn={{
 				icon: 'action-more',
 				action: actions}}/>

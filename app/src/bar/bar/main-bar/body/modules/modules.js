@@ -7,8 +7,12 @@ import ModalPage from '../../../../components/modal/modal-page'
 
 export default class Modules extends Component {
 
-	state = {
-		createModul: false
+	constructor(props) {
+		super(props)
+		this.state = {
+			createModul: false,
+		}
+		this.createModul = this.createModul.bind(this)
 	}
 
 	createModul() {

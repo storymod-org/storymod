@@ -8,14 +8,11 @@
     background-color: $bg-3;
     border: 1px solid $content-back-1;
     border-radius: 8px 8px 0 0;
-    display: none;
+    display: block;
     
     &__content {
         background-color: $bg-2;
         border-radius: 8px 8px 0 0;
     }
 
-    &--show {
-        display: block;
-    }
 }

@@ -1,12 +1,14 @@
 @import '../../../../components/atoms/atoms';
 
 .stm-body-sections {
+    height: 100%;
     &__content {
         background-color: $bg-2;
         width: 100%;
         height: calc(100% - 60px);
         border-radius: 8px 8px 0 0;
         overflow-y: scroll;
+        margin-bottom: 60px;
     }
 
     &__button {
@@ -18,8 +20,5 @@
     }
     &__modals {
         position: relative;
-    }
-    &__list {
-        margin-bottom: 60px;
     }
 }

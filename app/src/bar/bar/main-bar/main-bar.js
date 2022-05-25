@@ -8,8 +8,6 @@ export default class MainBar extends Component {
 
 	state = {
 
-		barNav: 0,
-
 		isActionPage: false,
 		isActionModul: false,
 		isActionSection: false,
@@ -52,10 +50,6 @@ export default class MainBar extends Component {
 
 	}
 
-	updateNav(nav) {
-		this.setState({nav})
-	}
-
 	useActionPage() {
 		this.setState({isActionPage: !this.state.isActionPage})
 	}
@@ -72,13 +66,8 @@ export default class MainBar extends Component {
 
 		const {
 
-			barNav
-
-		} = this.state
-
-		const {
-
 			projectNav,
+			updateNav,
 			config,
 			isPages,
 			
@@ -97,10 +86,9 @@ export default class MainBar extends Component {
 
 					config={config}
 					projectNav={projectNav}
-					barNav={barNav}
 					isPages={isPages}
 
-					updateNav={this.updateNav}
+					updateNav={updateNav}
 					usePublishSet={usePublishSet}
 					useMainMenu={useMainMenu}
 					useActionModul={this.useActionModul}
@@ -108,7 +96,7 @@ export default class MainBar extends Component {
 
 				<Body
 
-					barNav={barNav}
+					projectNav={projectNav}
 					updateNav={this.updateNav}
 
 					useActionPage={this.useActionPage}

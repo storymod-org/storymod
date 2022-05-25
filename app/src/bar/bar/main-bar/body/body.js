@@ -7,7 +7,7 @@ import Sections from './sections/sections'
 
 const Body = ({
 
-	barNav,
+	projectNav,
 
 	useActionPage,
 	usePage,
@@ -23,7 +23,7 @@ const Body = ({
 
 	const body = () => {
 
-		switch(barNav) {
+		switch(projectNav.nav) {
 
 		case 0:
 			return (
@@ -43,7 +43,7 @@ const Body = ({
 					useModul={useModul}/>
 				
 			)
-		case 3:
+		case 2:
 			return (
 
 				<Sections

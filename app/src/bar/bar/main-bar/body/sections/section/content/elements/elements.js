@@ -9,28 +9,36 @@ export default class Elements extends Component {
 
 		const {elements} = this.props
 
-		if (elements) {
-
-			const items = elements.map((item) => {
-				if (item.type === 'content-text') {
-					return (
-						<div key={item.id} className='stm-section-elements'>
-							<InputContentText placeholder={item.placeholder}/>
-						</div>)
-				} else {
-					return console.log('Error')
-				}      
-			})
-	
-			return (
-				<div className='stm-section-elements__list'>
-					{items}
-				</div>
-			)
-
-		} else {
-			console.log('Placeholder Elements')
+		if (!elements) {
+			return null
 		}
+
+		const renderElements = elements.map((element) => {
+			
+			if (element.type === 'content-text') {
+
+				return (
+
+					<div key={element.id} className='stm-section-elements'>
+
+						<InputContentText placeholder={element.placeholder}/>
+
+					</div>
+
+				)
+			} else {
+
+				return console.log('Elements Error')
+
+			}
+				
+		})
+
+		return (
+			<div className='stm-section-elements__list'>
+				{renderElements}
+			</div>
+		)
 
 	}
 

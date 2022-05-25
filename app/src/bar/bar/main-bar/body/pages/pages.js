@@ -7,10 +7,12 @@ import PagesModal from './pages-modal'
 
 export default class Pages extends Component {
 
-	state = {
-
-		createPage: false,
-		
+	constructor(props) {
+		super(props)
+		this.state = {
+			createPage: false,
+		}
+		this.createPage = this.createPage.bind(this)
 	}
 
 	createPage() {

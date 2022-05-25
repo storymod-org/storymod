@@ -3,27 +3,16 @@
 .stm-main-menu {
     position: absolute;
     width: 312px;
-    right: 0;
-    top: 48px;
+    right: 8px;
+    top: 56px;
     background-color: $bg-4;
     border: 1px solid $content-back-1;
     border-radius: 4px;
     z-index: 1;
 
     &__header {
-        display: flex;
         padding: 8px;
-        border-radius: 8px;
-        cursor: pointer;
-
-        &-wrap {
-            padding: 8px;
-            border-bottom: 1px solid $content-back-1;
-        }
-
-        &:hover {
-            background-color: $content-back-1;
-        }
+        border-bottom: 1px solid $content-back-1;
     }
 
     &__avatar {

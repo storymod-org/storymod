@@ -1,5 +1,3 @@
-// Рендер навигационных окон
-
 import React, {Component} from 'react'
 
 import MainBar from './bar/main-bar/main-bar'
@@ -11,16 +9,22 @@ import TarifPage from './bar/tarif-page/tarif-page'
 
 export default class Bar extends Component {
 
-	state = {
+	constructor(props) {
+		super(props)
 
-		isPages: true,
+		this.state = {
 
-		isMainMenu: false,
-		isAccountSet: false,
-		isProjectSet: false,
-		isPublishSet: false,
-		isTarifPage: false
+			isPages: true,
 
+			isMainMenu: false,
+			isAccountSet: false,
+			isProjectSet: false,
+			isPublishSet: false,
+			isTarifPage: false
+
+		}
+
+		this.useMainMenu = this.useMainMenu.bind(this)
 	}
 
 	useMainMenu() {
@@ -59,6 +63,7 @@ export default class Bar extends Component {
 		const {
 
 			projectNav,
+			updateNav,
 			config,
 			usePage,
 			useModul
@@ -71,6 +76,7 @@ export default class Bar extends Component {
 				<MainBar
 				
 					projectNav={projectNav}
+					updateNav={updateNav}
 					config={config}
 					isPages={isPages}
 

@@ -20,8 +20,21 @@ const Head = ({
 			</div>
 
 			<div className="stm-section-head__btns">
-				{add ? <ButtonIcon size='small' state='default-secondary' icon='action-remove'/> : null}
-				{remove ? <ButtonIcon size='small' state='default-secondary' icon='action-add'/> : null}
+
+				{add ? 
+
+					<ButtonIcon
+						size='small'
+						state='default-secondary'
+						icon='action-remove'/> : null}
+
+				{remove ?
+					
+					<ButtonIcon
+						size='small'
+						state='default-secondary'
+						icon='action-add'/> : null}
+						
 			</div>
 			
 		</div>

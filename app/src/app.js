@@ -11,27 +11,32 @@ export default class App extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
+			nav: 0,
 			page: 0,
 			modul: 0,
 			section: 0
 		}
+		this.updateNav = this.updateNav.bind(this)
 		this.usePage = this.usePage.bind(this)
+		this.useModul = this.useModul.bind(this)
 	}
 
-	updateProject(projectNav) {
-		console.log(projectNav)
-	}
-
-	changeProject(projectNav, element, value) {
-		console.log(projectNav, element, value)
+	updateNav(nav) {
+		this.setState({nav})
 	}
 
 	usePage(page) {
-		this.setState({page})
+		this.setState({
+			page: page,
+			nav: 1
+		})
 	}
 
 	useModul(modul) {
-		this.setState({modul}) 
+		this.setState({
+			modul: modul,
+			nav: 2
+		}) 
 	}
 
 	render() {
@@ -48,6 +53,7 @@ export default class App extends Component {
 				<div className='stm-app__bar'>
 					<Bar
 						projectNav={this.state}
+						updateNav={this.updateNav}
 						config={config}
 						usePage={this.usePage}
 						useModul={this.useModul}/>

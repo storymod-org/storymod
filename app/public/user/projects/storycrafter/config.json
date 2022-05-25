@@ -28,6 +28,7 @@
                         {
                             "id": 0,
                             "name": "Gj",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": false,
@@ -89,6 +90,7 @@
                         {
                             "id": 1,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -113,6 +115,7 @@
                         {
                             "id": 2,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -151,6 +154,7 @@
                         {
                             "id": 0,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": false,
@@ -212,6 +216,7 @@
                         {
                             "id": 1,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -236,6 +241,7 @@
                         {
                             "id": 2,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -284,6 +290,7 @@
                         {
                             "id": 0,
                             "name": "Gj",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": false,
@@ -345,6 +352,7 @@
                         {
                             "id": 1,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -369,6 +377,7 @@
                         {
                             "id": 2,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -407,6 +416,7 @@
                         {
                             "id": 0,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": false,
@@ -468,6 +478,7 @@
                         {
                             "id": 1,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
@@ -492,6 +503,7 @@
                         {
                             "id": 3,
                             "name": "Заголовок",
+                            "icon": "objects-section",
                             "add": true,
                             "remove": true,
                             "delited": true,
