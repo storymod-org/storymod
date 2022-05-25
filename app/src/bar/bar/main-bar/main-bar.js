@@ -7,25 +7,85 @@ import Body from './body/body'
 export default class MainBar extends Component {
 
 	state = {
-		nav: 0,
+
+		barNav: 0,
+
+		isActionPage: false,
+		isActionModul: false,
+		isActionSection: false,
+
+		actionPage: [
+			{
+				id: 0,
+				text: 'Изменить название',
+				action: null
+			},
+			{
+				id: 1,
+				text: 'Изменить адрес',
+				action: null
+			},
+			{
+				id: 2,
+				text: 'Удалить',
+				action: null
+			}
+		],
+
+		actionModul: [
+			{
+				id: 1,
+				text: 'Изменить название',
+				action: null
+			},
+			{
+				id: 2,
+				text: 'Изменить адрес',
+				action: null
+			},
+			{
+				id: 3,
+				text: 'Удалить',
+				action: null
+			}
+		]
+
 	}
 
 	updateNav(nav) {
 		this.setState({nav})
 	}
 
-	render() {
+	useActionPage() {
+		this.setState({isActionPage: !this.state.isActionPage})
+	}
 
-		const {nav} = this.state
+	useActionModul() {
+		this.setState({isActionModul: !this.state.isActionModul})
+	}
+
+	useActionSection() {
+		this.setState({isActionSection: !this.state.isActionSection})
+	}
+
+	render() {
 
 		const {
 
+			barNav
+
+		} = this.state
+
+		const {
+
+			projectNav,
 			config,
 			isPages,
 			
 			usePublishSet,
 			useMainMenu,
-			showActions
+			usePage,
+			useModul
 
 		} = this.props
 
@@ -34,18 +94,32 @@ export default class MainBar extends Component {
 			<div className='stm-main-bar'>
 
 				<Header
+
 					config={config}
-					nav={nav}
+					projectNav={projectNav}
+					barNav={barNav}
 					isPages={isPages}
 
 					updateNav={this.updateNav}
 					usePublishSet={usePublishSet}
 					useMainMenu={useMainMenu}
-					showActions={showActions}/>
+					useActionModul={this.useActionModul}
+					useActionSection={this.useActionSection}/>
 
 				<Body
-					nav={nav}
-					updateNav={this.updateNav}/>
+
+					barNav={barNav}
+					updateNav={this.updateNav}
+
+					useActionPage={this.useActionPage}
+					usePage={usePage}
+					pages={config.pages}
+					
+					useActionModul={this.useActionModul}
+					useModul={useModul}
+					modules={config.pages[projectNav.page].modules}
+					
+					sections={config.pages[projectNav.page].modules[projectNav.modul].sections}/>
 	
 			</div>
 

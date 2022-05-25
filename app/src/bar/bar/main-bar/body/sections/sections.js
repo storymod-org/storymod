@@ -33,36 +33,34 @@ export default class Sections extends Component {
 		
 		return (
 
-			<>
+			<div className='stm-body-sections'>
 			
-				<div className='stm-body__content'>
+				<div className='stm-body-sections__content'>
 
-					<div className="stm-section-list">
+					<div className="stm-body-sections__list">
 						{elements}
 					</div>
 
-					<div className='stm-body__content'>
+					<div className='stm-body-sections__content'>
 						<Button
 							text='Добавить секцию'
 							state='default-primary'
 							action={this.createSection}/>
 					</div>
 
-					<div className='stm-body__modal'>
+					<div className='stm-body-sections__modal'>
 
 						<ModalPage
 							title='Выберите секцию'
 							icon='objects-section'
-							// cells={modules[modul].sections}
-							cells={1}
-							show={this.state.createSection}
+							cells={sections}
 							close={this.createSection}/>
 							
 					</div>
 
 				</div>
 
-			</>
+			</div>
 
 		)
 

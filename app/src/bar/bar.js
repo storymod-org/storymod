@@ -1,3 +1,5 @@
+// Рендер навигационных окон
+
 import React, {Component} from 'react'
 
 import MainBar from './bar/main-bar/main-bar'
@@ -41,10 +43,6 @@ export default class Bar extends Component {
 		this.setState({isTarifPage: !this.state.isTarifPage})
 	}
 
-	showActions() {
-		console.log('Show Actions')
-	}
-
 	render() {
 
 		const {
@@ -60,8 +58,10 @@ export default class Bar extends Component {
 
 		const {
 
-			activeItem,
-			config
+			projectNav,
+			config,
+			usePage,
+			useModul
 
 		} = this.props
 
@@ -70,13 +70,14 @@ export default class Bar extends Component {
 
 				<MainBar
 				
-					activeItem={activeItem}
+					projectNav={projectNav}
 					config={config}
 					isPages={isPages}
 
 					usePublishSet={this.usePublishSet}
 					useMainMenu={this.useMainMenu}
-					showActions={this.showActions}/>
+					usePage={usePage}
+					useModul={useModul}/>
 
 				{isMainMenu   ? <MainMenu   use={this.useMainMenu}/>   : null}
 				{isAccountSet ? <AccountSet use={this.useAccountSet}/> : null}

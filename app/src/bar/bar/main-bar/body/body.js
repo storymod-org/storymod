@@ -5,18 +5,51 @@ import Pages from './pages/pages'
 import Modules from './modules/modules'
 import Sections from './sections/sections'
 
-const Body = ({nav}) => {
+const Body = ({
+
+	barNav,
+
+	useActionPage,
+	usePage,
+	pages,
+
+	useActionModul,
+	useModul,
+	modules,
+
+	sections
+
+}) => {
 
 	const body = () => {
 
-		switch(nav) {
+		switch(barNav) {
 
 		case 0:
-			return <Pages/>
+			return (
+
+				<Pages
+					useActionPage={useActionPage}
+					pages={pages}
+					usePage={usePage}/>
+				
+			)
 		case 1:
-			return <Modules/>
+			return (
+
+				<Modules
+					useActionModul={useActionModul}
+					modules={modules}
+					useModul={useModul}/>
+				
+			)
 		case 3:
-			return <Sections/>
+			return (
+
+				<Sections
+					sections={sections}/>
+				
+			)
 		default:
 			<div>Placeholder</div>		
 		}
@@ -24,7 +57,7 @@ const Body = ({nav}) => {
 
 	return (
 		<div className='stm-body'>
-			{body}
+			{body()}
 		</div>
 	)
 

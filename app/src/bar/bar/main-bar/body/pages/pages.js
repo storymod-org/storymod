@@ -1,16 +1,16 @@
 import React, {Component} from 'react'
-import '../body.scss'
+import './pages.scss'
 
-import ButtonMore from '../../../../components/button/button-more'
 import Cells from '../../../../components/cells/cells'
 import Button from '../../../../components/button/button'
 import PagesModal from './pages-modal'
-import pageActions from './page-actions'
 
 export default class Pages extends Component {
 
 	state = {
+
 		createPage: false,
+		
 	}
 
 	createPage() {
@@ -19,27 +19,37 @@ export default class Pages extends Component {
 
 	render() {
 
-		const {pages, action} = this.props
-		const {createPage} = this.state
+		const {
+
+			usePage,
+			useActionPage,
+			pages
+
+		} = this.props
+
+		const {
+
+			createPage
+		
+		} = this.state
 
 		return (
 
-			<>
+			<div className='stm-body-pages'>
 
-				<div className="stm-body__content">
+				<div className="stm-body-pages__content">
 
-					<Cells 
+					<Cells
+
 						cells={pages}
 						icon='objects-page'
-						action={action}
+						action={usePage}
 						type='button'
-						option={
-							<ButtonMore
-								actions={pageActions}/>}/>
+						more={useActionPage}/>
 
 				</div>
 
-				<div className="stm-body__button">
+				<div className="stm-body-pages__button">
 
 					<Button
 						text='Добавить страницу'
@@ -48,13 +58,13 @@ export default class Pages extends Component {
 
 				</div>
 
-				<div className="stm-body__modals">
+				<div className="stm-body-pages__modals">
 
 					{createPage ? <PagesModal close={this.createPage}/> : null}
 
 				</div>
 			
-			</>
+			</div>
 
 		)
 	}

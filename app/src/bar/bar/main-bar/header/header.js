@@ -6,36 +6,42 @@ import ButtonIcon from '../../../components/button/button-icon'
 const Header = ({
 		
 	config,
-	nav,
+	projectNav,
+	barNav,
 	isPages,
 
+	updateNav,
 	usePublishSet,
 	useMainMenu,
-	updateNav,
-	showActions
+	useActionModul,
+	useActionSection
 
 }) => {
 
 	const title = () => {
 
-		switch(nav) {
+		switch(barNav) {
 
 		case 0:
 			return config.info.name
 		case 1:
-			return config.pages[nav.page].name
+			return config.pages[projectNav.page].name
 		case 2:
-			return config.pages[nav.page].modules[nav.modul].name
+			return config.pages[projectNav.page].modules[projectNav.modul].name
 		default:
 			return 'Placeholder'
 		}
 
 	}
 
-	return (isPages & (nav === 0)) || (!isPages & (nav === 1)) ? (
+	const actions = (barNav === 1) ? useActionModul : useActionSection
+
+	console.log(title())
+
+	return (isPages & (barNav === 0)) || (!isPages & (barNav === 1)) ? (
 
 		<View 
-			title={title}
+			title={title()}
 			firstBtn={{
 				icon: 'action-publish',
 				action: usePublishSet}}
@@ -46,13 +52,13 @@ const Header = ({
 	) : (
 
 		<View
-			title={title}
+			title={title()}
 			firstBtn={{
 				icon: 'action-back',
-				action: () => updateNav(nav - 1)}}
+				action: () => updateNav(barNav - 1)}}
 			lastBtn={{
 				icon: 'action-more',
-				action: showActions}}/>
+				action: actions}}/>
 	)
 
 }

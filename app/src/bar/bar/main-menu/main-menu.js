@@ -1,49 +1,46 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './main-menu.scss'
+
 import db from '../../../user/db.json'
 import Button from '../../components/button/button'
 
-export default class MainMenu extends Component {
+const MainMenu = ({showSetAccount}) => {
 
-	render() {
+	return (
+		
+		<div className="stm-main-menu">
 
-		const {showSetAccount} = this.props
+			<div className="stm-main-menu__header-wrap">
 
-		return (
-			<div className="stm-main-menu">
-
-				<div className="stm-main-menu__header-wrap">
-
-					<div
-						onClick={showSetAccount}
-						className="stm-main-menu__header">
-							
-						<div className="stm-main-menu__avatar">
-							<img src={`${process.env.PUBLIC_URL}/user/${db.user.avatar}`} alt='avatar'/>
-						</div>
-						<div className="stm-main-menu__content">
-							<h3>{db.user.name}</h3>
-							<p>{db.user.email}</p>
-						</div>
+				<div
+					onClick={showSetAccount}
+					className="stm-main-menu__header">
+						
+					<div className="stm-main-menu__avatar">
+						<img src={`${process.env.PUBLIC_URL}/user/${db.user.avatar}`} alt='avatar'/>
 					</div>
-
-				</div>
-
-				<div className="stm-main-menu__body">
-					<diçv className="stm-main-menu__projects">
-						<Projects
-							projects={db.projects}/>
-					</diçv>
-					<div className="stm-main-menu__button">
-						<Button
-							state='default-primary'
-							text='Добавить проект'/>
+					<div className="stm-main-menu__content">
+						<h3>{db.user.name}</h3>
+						<p>{db.user.email}</p>
 					</div>
 				</div>
 
 			</div>
-		)
-	}
+
+			<div className="stm-main-menu__body">
+				<diçv className="stm-main-menu__projects">
+					<Projects
+						projects={db.projects}/>
+				</diçv>
+				<div className="stm-main-menu__button">
+					<Button
+						state='default-primary'
+						text='Добавить проект'/>
+				</div>
+			</div>
+
+		</div>
+	)
 
 }
 
@@ -65,3 +62,5 @@ const Projects = ({projects}) => {
 		)
 	})
 }
+
+export default MainMenu

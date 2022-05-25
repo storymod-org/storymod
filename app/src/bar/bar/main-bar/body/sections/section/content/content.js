@@ -8,18 +8,23 @@ export default class Content extends Component {
 
 	render() {
 
-		const {content, remove} = this.props
+		const {
+
+			content,
+			remove
+		
+		} = this.props
 
 		if (content) {
 
-			const elements = content.map((element) => {
+			const contents = content.map((content) => {
 				return (
-					<div key={element.id} className='stm-section-content'>
+					<div key={content.id} className='stm-section-content'>
 	
 						<div className="stm-section-content__head">
 	
 							<div className="stm-section-content__head-title">
-								<h3>{element.name}</h3>
+								<h3>{content.name}</h3>
 							</div>
 	
 							<div className="stm-section-content__head-remove">
@@ -28,7 +33,7 @@ export default class Content extends Component {
 	
 						</div>
 						
-						<Elements elements={element.elements}/>
+						<Elements elements={contents.elements}/>
 	
 					</div>
 				)
@@ -36,7 +41,7 @@ export default class Content extends Component {
 	
 			return (
 				<div className="stm-section-content__list">
-					{elements}
+					{contents}
 				</div>
 			)
 

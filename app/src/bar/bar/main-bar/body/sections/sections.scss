@@ -1,5 +1,25 @@
 @import '../../../../components/atoms/atoms';
 
-.stm-section-list {
-    margin-bottom: 60px;
+.stm-body-sections {
+    &__content {
+        background-color: $bg-2;
+        width: 100%;
+        height: calc(100% - 60px);
+        border-radius: 8px 8px 0 0;
+        overflow-y: scroll;
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        padding: 0 8px;
+        background: $bg-2;
+    }
+    &__modals {
+        position: relative;
+    }
+    &__list {
+        margin-bottom: 60px;
+    }
 }

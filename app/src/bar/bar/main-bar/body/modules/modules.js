@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import './modules.scss'
 
-import ButtonMore from '../../../../components/button/button-more'
 import Button from '../../../../components/button/button'
 import Cells from '../../../../components/cells/cells'
 import ModalPage from '../../../../components/modal/modal-page'
@@ -21,7 +20,8 @@ export default class Modules extends Component {
 		const {
 			
 			modules,
-			updateNav
+			useActionModul,
+			useModul
 
 		} = this.props
 
@@ -29,22 +29,20 @@ export default class Modules extends Component {
 
 		return (
 
-			<div className='stm-modules'>
+			<div className='stm-body-modules'>
 			
-				<div className='stm-body__content'>
+				<div className='stm-body-modules__content'>
 
 					<Cells 
 						cells={modules}
 						icon='objects-modul'
-						action={updateNav}
+						action={useModul}
 						type='button'
-						option={
-							<ButtonMore
-								actions={this.actions}/>}/>
+						more={useActionModul}/>
 
 				</div>
 
-				<div className='stm-body__button'>
+				<div className='stm-body-modules__button'>
 
 					<Button
 						text='Добавить модуль'
@@ -53,7 +51,7 @@ export default class Modules extends Component {
 
 				</div>
 
-				<div className='stm-body__modal'>
+				<div className='stm-body-modules__modal'>
 
 					{createModul ? 
 

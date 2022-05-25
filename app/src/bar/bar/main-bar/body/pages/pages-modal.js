@@ -2,7 +2,7 @@ import React from 'react'
 import Modal from '../../../../components/modal/modal'
 import ModalInputs from '../../../../components/modal/modal-inputs'
 
-const PagesModal = ({openModal}) => {
+const PagesModal = ({close}) => {
 
 	return (
 
@@ -10,7 +10,7 @@ const PagesModal = ({openModal}) => {
 
 			type="medium"
 			title='Создание страницы'
-			close={openModal}>
+			close={close}>
 
 			<ModalInputs
 
