@@ -5,6 +5,7 @@ import './cell-big.scss'
 const CellBig = ({
 	
 	active,
+	action,
 	logo,
 	title,
 	subtitle,
@@ -13,7 +14,8 @@ const CellBig = ({
 
 }) => {
 
-	const classActive = active ? 'stm-сell-big--active' : null
+	let mainClass = 'stm-cell-big'
+	active ? mainClass += ' stm-cell-big--active' : null
 
 	const isLogo = logo ? (
 		<img src={logo} alt={alt}/>
@@ -23,7 +25,7 @@ const CellBig = ({
 	
 	return (
 
-		<div className={`stm-cell-big ${classActive}`}>
+		<div onClick={action} className={mainClass}>
 
 			<div className="stm-cell-big__logo">
 				{isLogo}

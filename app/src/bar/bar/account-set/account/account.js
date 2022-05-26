@@ -76,4 +76,4 @@ const Account = ({setBody, setNav}) => {
 	)
 }
 
-export default Account;
+export default Account

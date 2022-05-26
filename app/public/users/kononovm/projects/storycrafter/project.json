@@ -1,0 +1,534 @@
+{
+    "info" : {
+        "name" : "Сайт по пиломатериалам",
+        "isPages" : false
+    },
+
+    "pages" : [
+
+        {
+            "name": "Главная страница",
+            "id": 0,
+            "icon": "objects-page",
+            "href": "index",
+            "isMain": true,
+
+            "modules" : [
+                {
+                    "id": 0,
+                    "name": "Основной экран",
+                    "icon": "objects-modul",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Теплый семейный дом c террасой за 30 дней",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 0,
+                            "name": "Gj",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 0,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "id": 1,
+                    "name": "Основной экран",
+                    "icon": "objects-modul",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Юлька Дура",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 0,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 0,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                }
+            ]
+        },
+        {
+            "name": "Каталог",
+            "id": 1,
+            "icon": "objects-page",
+            "href": "index",
+            "isMain": true,
+
+            "modules" : [
+                {
+                    "id": 0,
+                    "name": "Основной экран",
+                    "icon": "objects-modul",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Теплый семейный дом c террасой за 30 дней",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 0,
+                            "name": "Gj",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 0,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 2,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                },
+                {
+                    "id": 1,
+                    "name": "Основной экран",
+                    "icon": "objects-modul",
+                    "component": "MainScreen",
+                    "image": "house.jpg",
+                    "title": "Юлька Дура",
+                    "subtitle": "Альтернатива городской квартире",
+                    "button": true,
+
+                    "sections": [
+                        {
+                            "id": 0,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": false,
+
+                            "styles": [
+                                {
+                                    "id": 0,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                },
+                                {
+                                    "id": 1,
+                                    "type": "content-text",
+                                    "placeholder": "Введите текст"
+                                }
+                            ],
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                },
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        },
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 1,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 0,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 0,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        },
+                        {
+                            "id": 3,
+                            "name": "Заголовок",
+                            "icon": "objects-section",
+                            "add": true,
+                            "remove": true,
+                            "delited": true,
+
+                            "content": [
+                                {
+                                    "id": 1,
+                                    "name": "Заголовок",
+                                    "remove": true,
+    
+                                    "elements": [
+                                        {
+                                            "id": 1,
+                                            "type": "content-text",
+                                            "placeholder": "Введите текст"
+                                        }
+                                    ]
+    
+                                }
+                            ]
+                        }
+                    ]
+
+                }
+            ]
+        }
+    ]
+}

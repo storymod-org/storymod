@@ -9,10 +9,15 @@ import Subscription from './subscription/subscription'
 
 export default class AccountSet extends Component {
 
+	constructor() {
+		super()
+		this.setNav = this.setNav.bind(this)
+	}
+
 	state = {
 
 		active: 0,
-		children: 0,
+
 		elements: [
 
 			{
@@ -20,41 +25,42 @@ export default class AccountSet extends Component {
 				id: 0,
 				name: 'Аккаунт',
 				icon: 'menu-account',
-				active: true,
 				save: true,
-				component: <Account setBody={this.setBody} setNav={this.setNav}/>,
-		
-				children: [
-					{
-						id: 0,
-						name: 'E-Mail',
-						save: true,
-						component: <Email/>
-					},
-					{
-						id: 1,
-						name: 'Пароль',
-						save: true,
-						component: <Password/>
-					},
-				]
+				component: <Account setBody={this.setBody} setNav={this.setNav}/>
+
+			},
+			{
+
+				id: 1,
+				parentID: 0,
+				name: 'E-Mail',
+				save: true,
+				component: <Email/>
+
+			},
+			{
+
+				id: 2,
+				parentID: 0,
+				name: 'Пароль',
+				save: true,
+				component: <Password/>
+
 			},
 			{
 		
-				id: 1,
+				id: 3,
 				name: 'Подписка',
 				icon: 'menu-subscription',
-				active: false,
 				save: false,
 				component: <Subscription/>
 		
 			},
 			{
 		
-				id: 2,
+				id: 4,
 				name: 'Настройки',
 				icon: 'menu-settings',
-				active: false,
 				disable: true,
 				save: false,
 				component: <div>Placeholder</div>
@@ -62,10 +68,6 @@ export default class AccountSet extends Component {
 			}
 		]
 
-	}
-
-	setBody = (body) => {
-		this.setState({body})
 	}
 
 	setNav = (active) => {
@@ -94,15 +96,22 @@ export default class AccountSet extends Component {
 
 	render() {
 
-		const {active, body, elements} = this.state
+		const {
+			active,
+			elements
+		} = this.state
+
 		const {useAccountSet} = this.props
+
+		const cells = elements.filter(element => element.icon)
 		
 		return (
 
 			<ModalSettings
+			
 				title='Настройки'
-				cells={elements}
-				body={elements[active].body[body]}
+				cells={cells}
+				body={elements[active].component}
 				active={active}
 				cellAction={this.setNavigation}
 				setBody={this.setBody}

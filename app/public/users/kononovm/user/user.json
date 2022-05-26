@@ -1,0 +1,32 @@
+{
+	"name": "Kononov Max",
+	"id": "kononovm",
+	"email": "kononovm33@gmail.com",
+	"avatar": "avatar.jpeg",
+	"openProject": "storycrafter",
+
+	"projects" : [
+
+		{
+			"id": 0,
+			"active": true,
+			"name": "Storycrafter",
+			"href": "storycrafter.ru",
+			"logo": "logo.jpeg"
+		},
+		{
+			"id": 1,
+			"active": false,
+			"name": "Storycrafter",
+			"href": "telegram.ru",
+			"logo": "logo.jpeg"
+		},
+		{
+			"id": 2,
+			"active": false,
+			"name": "Storycrafter",
+			"href": "storycrafter.ru",
+			"logo": "logo.jpeg"
+		}
+	]
+}

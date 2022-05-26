@@ -25,6 +25,7 @@ export default class Bar extends Component {
 		}
 
 		this.useMainMenu = this.useMainMenu.bind(this)
+		this.useAccountSet = this.useAccountSet.bind(this)
 	}
 
 	useMainMenu() {
@@ -85,7 +86,9 @@ export default class Bar extends Component {
 					usePage={usePage}
 					useModul={useModul}/>
 
-				{isMainMenu   ? <MainMenu   use={this.useMainMenu}/>   : null}
+				{isMainMenu   ? 
+					<MainMenu
+						useAccountSet={this.useAccountSet}/>: null}
 				{isAccountSet ? <AccountSet use={this.useAccountSet}/> : null}
 				{isProjectSet ? <ProjectSet use={this.useProjectSet}/> : null}
 				{isPublishSet ? <PublishSet use={this.usePublishSet}/> : null}
