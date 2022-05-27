@@ -11,28 +11,31 @@ export default class ButtonMore extends Component {
 		this.state = {
 			show: false
 		}
-		this.toggleDropdown = this.toggleDropdown.bind(this)
+		this.toggle = this.toggle.bind(this)
 	}
 
-	toggleDropdown() {
+	toggle() {
 		this.setState({show: !this.state.show})
 	}
 
 	render() {
 
 		const {actions} = this.props
+		const {show} = this.state
 
 		return (
+
 			<div className='stm-button-more'>
+
 				<ButtonIcon
-					size='big'
-					state='default-secondary'
 					icon='action-more'
-					action={this.toggleDropdown}/>
+					action={this.toggle}/>
+
 				<div className='stm-button-more__dropdown'>
-					<Dropdown actions={actions} show={this.state.show}/>
+					{show ? <Dropdown actions={actions}/> : null}
 				</div>
 			</div>
+
 		)
 	}
 }

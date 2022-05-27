@@ -1,0 +1,16 @@
+@import '../../atoms/atoms';
+
+.stm-modal-set {
+    display: flex;
+    height: calc(100% - 40px);
+    border-radius: 8px 8px 0 0;
+    overflow: hidden;
+
+    &__sidebar {
+        width: 200px;
+        border-right: 1px solid $content-back-1;
+        background-color: $bg-2;
+        flex-shrink: 0;
+    }
+
+}

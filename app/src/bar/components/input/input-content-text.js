@@ -6,8 +6,8 @@ export default class InputContentText extends Component {
 
 	render() {
 
-		const {disabled, placeholder} = this.props;
-		const className = 'stm-input stm-input-content-text';
+		const {disabled, placeholder} = this.props
+		const className = 'stm-input stm-input-content-text'
 
 		return (
 			<input

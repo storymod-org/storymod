@@ -1,6 +1,5 @@
 import React, {Component} from 'react'
 import './input-image-small.scss'
-import account from '../../components/atoms/icons/objects-account.svg'
 
 export default class InputImageSmall extends Component {
 
@@ -15,7 +14,7 @@ export default class InputImageSmall extends Component {
 			</div>
 			: 
 			<div className='stm-input-image-small__placeholder'>
-				<img src={account} alt='Avatar'/>
+				<img src='bar/icons/objects-account.svg' alt='Avatar'/>
 			</div>
 
 		return (

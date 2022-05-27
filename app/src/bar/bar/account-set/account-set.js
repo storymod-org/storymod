@@ -1,11 +1,10 @@
 import React, {Component} from 'react'
-import './account-set.scss'
 
-import ModalSettings from '../../components/modal/modal-settings/modal-settings'
-import Account from './account/account'
-import Email from './email/email'
-import Password from './password/password'
-import Subscription from './subscription/subscription'
+import ModalSet from '../../components/modal/modal-set/modal-set'
+import Account from './children/account'
+import Email from './children/email'
+import Password from './children/password'
+import Subscription from './children/subscription'
 
 export default class AccountSet extends Component {
 
@@ -25,26 +24,25 @@ export default class AccountSet extends Component {
 				id: 0,
 				name: 'Аккаунт',
 				icon: 'menu-account',
-				save: true,
-				component: <Account setBody={this.setBody} setNav={this.setNav}/>
+				save: true
 
 			},
 			{
 
 				id: 1,
+				child: true,
 				parentID: 0,
 				name: 'E-Mail',
-				save: true,
-				component: <Email/>
+				save: true
 
 			},
 			{
 
 				id: 2,
+				child: true,
 				parentID: 0,
 				name: 'Пароль',
-				save: true,
-				component: <Password/>
+				save: true
 
 			},
 			{
@@ -52,8 +50,7 @@ export default class AccountSet extends Component {
 				id: 3,
 				name: 'Подписка',
 				icon: 'menu-subscription',
-				save: false,
-				component: <Subscription/>
+				save: false
 		
 			},
 			{
@@ -62,8 +59,7 @@ export default class AccountSet extends Component {
 				name: 'Настройки',
 				icon: 'menu-settings',
 				disable: true,
-				save: false,
-				component: <div>Placeholder</div>
+				save: false
 				
 			}
 		]
@@ -74,48 +70,75 @@ export default class AccountSet extends Component {
 		this.setState({active})
 	}
 
-	setNavigation(id) {
-
-		this.setState(({elements}) => {
-
-			const resetCells = elements.map((cells) => {
-				const cell = {...cells, active: false}
-				return cell
-			})
-
-			const activeCell = {...elements[id], active: true}
-			const newCell = [...resetCells.slice(0, id), activeCell, ...resetCells.slice(id + 1)]
-
-			return {
-				active: id,
-				elements: newCell,
-				body: 0
-			}
-		})
-	}
-
 	render() {
 
 		const {
+
 			active,
 			elements
+
 		} = this.state
 
 		const {useAccountSet} = this.props
 
 		const cells = elements.filter(element => element.icon)
+
+		const component = () => {
+
+			switch(active) {
+
+			case 0:
+				return (
+					<Account
+						setNav={this.setNav}
+						element={elements[active]}/>
+				)
+			
+			case 1:
+				return (
+					<Email
+						setNav={this.setNav}
+						element={elements[active]}/>
+				)
+			
+			case 2:
+				return (
+					<Password
+						setNav={this.setNav}
+						element={elements[active]}/>
+				)
+
+			case 3:
+				return (
+					<Subscription
+						setNav={this.setNav}
+						element={elements[active]}/>
+				)
+
+			case 4:
+				return <div>Placeholder</div>
+				
+			default:
+				return console.log('Body component error')	
+
+			}
+
+		}
 		
 		return (
 
-			<ModalSettings
+			<ModalSet
 			
 				title='Настройки'
+				close={useAccountSet}
+
 				cells={cells}
-				body={elements[active].component}
 				active={active}
-				cellAction={this.setNavigation}
-				setBody={this.setBody}
-				close={useAccountSet}/>
+				action={this.setNav}>
+
+				{component()}
+
+			</ModalSet>
 
 		)
 	}

@@ -86,10 +86,8 @@ export default class Bar extends Component {
 					usePage={usePage}
 					useModul={useModul}/>
 
-				{isMainMenu   ? 
-					<MainMenu
-						useAccountSet={this.useAccountSet}/>: null}
-				{isAccountSet ? <AccountSet use={this.useAccountSet}/> : null}
+				{isMainMenu   ? <MainMenu   useAccountSet={this.useAccountSet}/>: null}
+				{isAccountSet ? <AccountSet useAccountSet={this.useAccountSet}/> : null}
 				{isProjectSet ? <ProjectSet use={this.useProjectSet}/> : null}
 				{isPublishSet ? <PublishSet use={this.usePublishSet}/> : null}
 				{isTarifPage  ? <TarifPage  use={this.useTarifPage}/>  : null}

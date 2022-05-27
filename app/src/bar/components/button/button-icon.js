@@ -1,24 +1,46 @@
-import React, {Component} from 'react'
+import React from 'react'
 import './button-icon.scss'
 
-export default class ButtonIcon extends Component {
+const ButtonIcon = ({
 
-	render() {
+	state,
+	size,
+	icon,
+	action,
+	disabled
 
-		const {state, size, icon, action} = this.props
-		const className = `stm-btn-icon stm-btn-icon--${state} stm-btn-icon--${size}`
-		const srcIcon = `bar/icons/${icon}.svg`
+}) => {
 
-		return (
+	const mainClass = ['stm-btn-icon']
 
-			<button
-				className={className}
-				onClick={action}>
-				<img src={srcIcon} alt='Icon'/>
-			</button>
+	disabled ? 
 
-		)
+		mainClass.push('stm-btn-icon--disabled') 
+		
+		: state ? 
 
-	}
+			mainClass.push(`stm-btn-icon--${state}`) : 
+			mainClass.push('stm-btn-icon--default-secondary')
+
+	size ? 
+	
+		mainClass.push(`stm-btn-icon--${size}`) : 
+		mainClass.push('stm-btn-icon--big')
+
+	return (
+
+		<button
+
+			className={mainClass.join(' ')}
+			onClick={disabled ? null : action}
+			disabled={disabled}>
+
+			<img src={`bar/icons/${icon}.svg`} alt='Icon'/>
+
+		</button>
+
+	)
 
 }
+
+export default ButtonIcon
